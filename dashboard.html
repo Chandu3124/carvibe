@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102A43">
+    <title>CARVIBE | Buyer & Seller Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- External JavaScript -->
+    <script src="dashboard.js" defer></script>
+</head>
+
+<body>
+
+
+<header class="top-header">
+
+    <button class="icon-btn mobile-menu" id="menuToggle"
+            aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Redesigned CarVibe logo -->
+    <a href="index.html" class="brand">
+        <img src="images/logo website.png" alt="image">
+        <span class="brand-copy">
+            <span class="brand-name">Car<span>Vibe</span></span>
+            <span class="brand-tagline">Find Your Drive</span>
+        </span>
+    </a>
+
+    <!-- Search -->
+    <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="globalSearch"
+               placeholder="Search vehicles and inquiries..."
+               aria-label="Search dashboard">
+    </div>
+
+    <div class="header-actions">
+
+        <div class="header-greeting">
+            <span class="greeting-icon">
+                <i class="fa-regular fa-sun"></i>
+            </span>
+            <span>
+                <small id="greetingMessage">Good afternoon,</small>
+                <strong id="greetingName">John!</strong>
+            </span>
+        </div>
+
+        <button class="icon-btn" id="themeToggle"
+                aria-label="Toggle dark mode" title="Dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- RTL / LTR toggle -->
+        <button class="icon-btn" id="rtlToggle"
+                aria-label="Switch to right-to-left"
+                title="Toggle RTL" aria-pressed="false">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </button>
+
+        <button class="icon-btn" id="notificationBtn"
+                aria-label="Notifications" title="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-dot"></span>
+        </button>
+
+        <!-- Profile dropdown -->
+        <div class="profile-menu" id="profileMenu">
+            <button class="profile-button" id="profileBtn"
+                    aria-expanded="false"
+                    aria-controls="profileDropdown">
+                <span class="avatar" id="profileAvatar">JD</span>
+                <span class="profile-info">
+                    <strong id="profileName">John Davis</strong>
+                    <small id="profileRole">Buyer Account</small>
+                </span>
+                <i class="fa-solid fa-chevron-down profile-chevron"></i>
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown" hidden>
+                <div class="dropdown-user">
+                    <span class="avatar dropdown-avatar" id="dropdownAvatar">JD</span>
+                    <span>
+                        <strong id="dropdownName">John Davis</strong>
+                        <small id="dropdownRole">Buyer Account</small>
+                    </span>
+                </div>
+
+                <div class="dropdown-divider"></div>
+
+                <button type="button" class="dropdown-item"
+                        data-profile-action="settings">
+                    <i class="fa-regular fa-user"></i>
+                    My Profile
+                </button>
+
+                <button type="button" class="dropdown-item"
+                        data-profile-action="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    Account Settings
+                </button>
+
+                <button type="button" class="dropdown-item"
+                        data-profile-action="help">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Help & Support
+                </button>
+
+                <div class="dropdown-divider"></div>
+
+                <button type="button"
+                        class="dropdown-item dropdown-logout"
+                        data-profile-action="logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Sign Out
+                </button>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <p class="account-label">Account Type</p>
+
+        <div class="role-switch">
+            <button class="role-btn active" data-role="buyer">Buyer</button>
+            <button class="role-btn" data-role="seller">Seller</button>
+        </div>
+
+        <p class="account-label">Workspace</p>
+
+        <nav class="nav-section" id="navigation">
+
+            <button class="nav-link active" data-section="overview">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Overview</span>
+            </button>
+
+            <button class="nav-link" data-section="vehicles">
+                <i class="fa-solid fa-car"></i>
+                <span id="vehicleNavLabel">Saved Vehicles</span>
+                <span class="nav-count" id="vehicleNavCount">04</span>
+            </button>
+
+            <button class="nav-link" data-section="inquiries">
+                <i class="fa-regular fa-comments"></i>
+                <span>Buyer Inquiries</span>
+                <span class="nav-count">03</span>
+            </button>
+
+            <button class="nav-link" data-section="inspections">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Inspection Reports</span>
+            </button>
+
+            <button class="nav-link" data-section="appointments">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Test Drives</span>
+            </button>
+
+            <button class="nav-link hidden" data-section="analytics" id="analyticsNav">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance</span>
+            </button>
+
+        </nav>
+
+        <p class="account-label">Preferences</p>
+
+        <nav class="nav-section">
+            <button class="nav-link" data-section="settings">
+                <i class="fa-solid fa-gear"></i>
+                <span>Account Settings</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="support-card">
+                <i class="fa-solid fa-headset"></i>
+                <h4>Need a hand?</h4>
+                <p>Our support team is here to help you buy or sell with confidence.</p>
+                <button id="supportBtn">Contact Support</button>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- OVERVIEW -->
+        <section id="overviewSection" class="dashboard-section">
+
+            <div class="welcome-row">
+                <div>
+                    <p class="eyebrow">YOUR CARVIBE WORKSPACE</p>
+                    <h2 id="welcomeTitle">Welcome back, John!</h2>
+                    <p id="welcomeDescription">
+                        Manage your saved cars, track inquiries and discover your next ride.
+                    </p>
+                </div>
+
+                <button class="primary-btn" id="mainAction">
+                    <i class="fa-solid fa-plus"></i>
+                    <span id="mainActionText">Explore Cars</span>
+                </button>
+            </div>
+
+            <!-- BUYER STATISTICS -->
+            <div class="stats-grid" id="buyerStats">
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon red-bg"><i class="fa-regular fa-heart"></i></span>
+                        <span class="stat-change">+2 this week</span>
+                    </div>
+                    <p class="stat-label">Saved Vehicles</p>
+                    <h3 class="stat-value" id="savedStat">04</h3>
+                    <p class="stat-foot">Vehicles on your shortlist</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon blue-bg"><i class="fa-regular fa-comments"></i></span>
+                        <span class="stat-change">2 unread</span>
+                    </div>
+                    <p class="stat-label">Active Inquiries</p>
+                    <h3 class="stat-value">03</h3>
+                    <p class="stat-foot">Conversations with sellers</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon green-bg"><i class="fa-solid fa-calendar-check"></i></span>
+                        <span class="stat-change">Upcoming</span>
+                    </div>
+                    <p class="stat-label">Test Drives</p>
+                    <h3 class="stat-value">02</h3>
+                    <p class="stat-foot">Scheduled appointments</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon orange-bg"><i class="fa-solid fa-shield-halved"></i></span>
+                        <span class="stat-change">Verified</span>
+                    </div>
+                    <p class="stat-label">Inspection Reports</p>
+                    <h3 class="stat-value">03</h3>
+                    <p class="stat-foot">Reports available to review</p>
+                </article>
+
+            </div>
+
+            <!-- SELLER STATISTICS -->
+            <div class="stats-grid hidden" id="sellerStats">
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon red-bg"><i class="fa-solid fa-car"></i></span>
+                        <span class="stat-change">Your inventory</span>
+                    </div>
+                    <p class="stat-label">Active Listings</p>
+                    <h3 class="stat-value" id="activeListingStat">03</h3>
+                    <p class="stat-foot">Vehicles currently listed</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon blue-bg"><i class="fa-solid fa-eye"></i></span>
+                        <span class="stat-change">+18.5%</span>
+                    </div>
+                    <p class="stat-label">Listing Views</p>
+                    <h3 class="stat-value">1.2K</h3>
+                    <p class="stat-foot">Views across your vehicles</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon green-bg"><i class="fa-regular fa-comments"></i></span>
+                        <span class="stat-change">3 unread</span>
+                    </div>
+                    <p class="stat-label">Buyer Inquiries</p>
+                    <h3 class="stat-value">12</h3>
+                    <p class="stat-foot">Potential buyers to contact</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon orange-bg"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                        <span class="stat-change">This month</span>
+                    </div>
+                    <p class="stat-label">Vehicles Sold</p>
+                    <h3 class="stat-value">02</h3>
+                    <p class="stat-foot">Completed vehicle sales</p>
+                </article>
+
+            </div>
+
+            <div class="notice">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <h4 id="noticeTitle">Your next car is closer than you think!</h4>
+                    <p id="noticeDescription">
+                        Compare inspection reports and follow up with sellers to make a confident purchase.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VEHICLES AND INQUIRIES -->
+            <div class="content-grid">
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3 id="vehiclePanelTitle">Saved Vehicles</h3>
+                            <p id="vehiclePanelDescription">Your shortlisted cars</p>
+                        </div>
+                        <button class="text-link" data-open-section="vehicles">
+                            View All <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="vehicle-list" id="vehicleList">
+
+                        <article class="vehicle-item" data-search="hyundai creta sx suv petrol">
+                            <img class="vehicle-image"
+                                 src="https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&w=400&q=80"
+                                 alt="Hyundai Creta SX">
+                            <div class="vehicle-info">
+                                <h4>Hyundai Creta SX</h4>
+                                <p>2022 · 24,000 km · Petrol</p>
+                                <div class="vehicle-price">₹12.80 Lakh</div>
+                                <div class="vehicle-bottom">
+                                    <span class="status active">Verified</span>
+                                    <div class="mini-actions">
+                                        <button class="mini-btn" data-action="details" data-name="Hyundai Creta SX" aria-label="View vehicle">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button class="mini-btn" data-action="remove" aria-label="Remove saved vehicle">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="vehicle-item" data-search="honda city zx sedan petrol">
+                            <img class="vehicle-image"
+                                 src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80"
+                                 alt="Honda City ZX">
+                            <div class="vehicle-info">
+                                <h4>Honda City ZX</h4>
+                                <p>2023 · 18,500 km · Petrol</p>
+                                <div class="vehicle-price">₹11.45 Lakh</div>
+                                <div class="vehicle-bottom">
+                                    <span class="status active">Verified</span>
+                                    <div class="mini-actions">
+                                        <button class="mini-btn" data-action="details" data-name="Honda City ZX" aria-label="View vehicle">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button class="mini-btn" data-action="remove" aria-label="Remove saved vehicle">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="vehicle-item" data-search="tata nexon ev electric">
+                            <img class="vehicle-image"
+                                 src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&q=80"
+                                 alt="Tata Nexon EV">
+                            <div class="vehicle-info">
+                                <h4>Tata Nexon EV</h4>
+                                <p>2023 · 12,000 km · Electric</p>
+                                <div class="vehicle-price">₹13.20 Lakh</div>
+                                <div class="vehicle-bottom">
+                                    <span class="status pending">Report Pending</span>
+                                    <div class="mini-actions">
+                                        <button class="mini-btn" data-action="details" data-name="Tata Nexon EV" aria-label="View vehicle">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button class="mini-btn" data-action="remove" aria-label="Remove saved vehicle">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3>Recent Inquiries</h3>
+                            <p id="inquiryPanelDescription">Your latest conversations</p>
+                        </div>
+                        <button class="text-link" data-open-section="inquiries">View All</button>
+                    </div>
+
+                    <div class="inquiry-list" id="inquiryList">
+
+                        <div class="inquiry-item" data-search="michael king hyundai creta">
+                            <div class="inquiry-avatar">MK</div>
+                            <div class="inquiry-details">
+                                <h4>Michael King</h4>
+                                <p>Hyundai Creta SX · Seller replied</p>
+                            </div>
+                            <span class="inquiry-time">10 min</span>
+                        </div>
+
+                        <div class="inquiry-item" data-search="sarah parker honda city">
+                            <div class="inquiry-avatar">SP</div>
+                            <div class="inquiry-details">
+                                <h4>Sarah Parker</h4>
+                                <p>Honda City ZX · Price discussion</p>
+                            </div>
+                            <span class="inquiry-time">1 hour</span>
+                        </div>
+
+                        <div class="inquiry-item" data-search="robert james tata nexon">
+                            <div class="inquiry-avatar">RJ</div>
+                            <div class="inquiry-details">
+                                <h4>Robert James</h4>
+                                <p>Tata Nexon EV · Inspection query</p>
+                            </div>
+                            <span class="inquiry-time">Yesterday</span>
+                        </div>
+
+                    </div>
+
+                    <button class="secondary-btn full-btn" data-open-section="inquiries">
+                        <i class="fa-regular fa-comments"></i> Manage Inquiries
+                    </button>
+                </section>
+
+            </div>
+
+            <!-- INSPECTIONS AND ACTIVITY -->
+            <div class="content-grid">
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3>Inspection Reports</h3>
+                            <p>Review vehicle condition before buying</p>
+                        </div>
+                        <button class="text-link" data-open-section="inspections">View All</button>
+                    </div>
+
+                    <div class="report-list">
+
+                        <div class="report-item">
+                            <div class="report-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+                            <div class="report-info">
+                                <h4>Hyundai Creta SX</h4>
+                                <p>Engine, brakes and body verified</p>
+                            </div>
+                            <button class="mini-btn" data-action="report" data-name="Hyundai Creta SX" aria-label="View report">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="report-item">
+                            <div class="report-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+                            <div class="report-info">
+                                <h4>Honda City ZX</h4>
+                                <p>Full inspection completed</p>
+                            </div>
+                            <button class="mini-btn" data-action="report" data-name="Honda City ZX" aria-label="View report">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="report-item">
+                            <div class="report-icon pending-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="report-info">
+                                <h4>Tata Nexon EV</h4>
+                                <p>Inspection report processing</p>
+                            </div>
+                            <span class="status pending">Pending</span>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3>Recent Activity</h3>
+                            <p>Updates from your account</p>
+                        </div>
+                        <i class="fa-solid fa-clock-rotate-left accent-icon"></i>
+                    </div>
+
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <h4>Inspection report ready</h4>
+                            <p>Your Honda City ZX report is available to review.</p>
+                        </div>
+                        <div class="activity-item">
+                            <h4>Seller responded</h4>
+                            <p>You received a reply about the Hyundai Creta SX.</p>
+                        </div>
+                        <div class="activity-item">
+                            <h4>Test drive scheduled</h4>
+                            <p>Your next appointment is confirmed for Saturday.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- SECONDARY DASHBOARD PAGES -->
+        <section id="detailSection" class="dashboard-section hidden">
+
+            <div class="welcome-row">
+                <div>
+                    <p class="eyebrow">CARVIBE MANAGEMENT</p>
+                    <h2 id="detailTitle">Vehicle Management</h2>
+                    <p id="detailDescription">Manage your marketplace activity.</p>
+                </div>
+
+                <button class="primary-btn" id="detailAction">
+                    <i class="fa-solid fa-plus"></i>
+                    <span id="detailActionText">Add Vehicle</span>
+                </button>
+            </div>
+
+            <section class="panel">
+                <div class="panel-header">
+                    <div>
+                        <h3 id="detailPanelTitle">Your Vehicles</h3>
+                        <p id="detailPanelDescription">Review and manage your information.</p>
+                    </div>
+                    <button class="secondary-btn" id="backToOverview">
+                        <i class="fa-solid fa-arrow-left"></i> Overview
+                    </button>
+                </div>
+
+                <div id="detailBody"></div>
+            </section>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>© 2026 <strong>CARVIBE</strong>. All rights reserved.</p>
+            <p>Drive smarter. Buy with confidence.</p>
+        </footer>
+
+    </main>
+</div>
+
+<!-- ADD / EDIT VEHICLE MODAL -->
+<div class="modal-overlay" id="vehicleModal"
+     role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+    <div class="modal">
+        <div class="modal-header">
+            <h3 id="modalTitle">Add Vehicle</h3>
+            <button class="icon-btn" id="closeModal" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <form id="vehicleForm">
+            <div class="form-group">
+                <label for="carName">Vehicle Name</label>
+                <input type="text" id="carName" placeholder="e.g. Maruti Suzuki Swift" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carYear">Manufacturing Year</label>
+                <input type="number" id="carYear" min="1990" max="2035" placeholder="2023" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carPrice">Price (₹)</label>
+                <input type="number" id="carPrice" min="1" placeholder="850000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carFuel">Fuel Type</label>
+                <select id="carFuel" required>
+                    <option value="">Select fuel type</option>
+                    <option>Petrol</option>
+                    <option>Diesel</option>
+                    <option>Electric</option>
+                    <option>Hybrid</option>
+                    <option>CNG</option>
+                </select>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="secondary-btn" id="cancelModal">Cancel</button>
+                <button type="submit" class="primary-btn">
+                    <i class="fa-solid fa-check"></i> Save Vehicle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="header.js"></script>
+</body>
+</html>

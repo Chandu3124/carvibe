@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CARVIBE | Used Car Marketplace</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="global.css">
+<link rel="stylesheet"  href="buy.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="carvibe-header" id="carvibeHeader">
+
+        <div class="header-container">
+
+            <!-- ================= LOGO ================= -->
+
+            <!-- LOGO WITH TAGLINE -->
+<a href="index.html" class="carvibe-logo">
+
+    <img
+        src="images/logo website.png"
+        alt="CarVibe Logo"
+        class="logo-image"
+    >
+
+    <div class="logo-text">
+        <span class="logo-name">
+            Car<span class="logo-accent">Vibe</span>
+        </span>
+
+        <span class="logo-tagline">Find Your Drive</span>
+    </div>
+
+</a>
+
+
+            <!-- ================= NAVIGATION ================= -->
+
+            <nav class="main-nav" id="mainNav">
+
+                <!-- HOME DROPDOWN -->
+                <div class="dropdown">
+
+                    <a href="index.html" class="dropdown-toggle">
+
+                        Home
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            Home 1
+                        </a>
+
+                        <a href="home1.html">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a href="buy.html">
+                    Buy Cars
+                </a>
+
+                <a href="sell.html">
+                    Sell Your Car
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- ================= HEADER ACTIONS ================= -->
+
+            <div class="header-actions">
+
+                <!-- RTL BUTTON -->
+                <button
+                    class="header-icon-btn rtl-btn"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    RTL
+
+                </button>
+
+
+                <!-- DARK MODE -->
+                <button
+                    class="header-icon-btn"
+                    id="darkToggle"
+                    aria-label="Toggle Dark Mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- LOGIN -->
+                <a
+                    href="login.html"
+                    class="login-btn">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>
+                        Login
+                    </span>
+
+                </a>
+
+
+                <!-- MOBILE MENU -->
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open Menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+<section class="auto-hero" id="home">
+
+    <!-- Background image and overlays -->
+    <div class="auto-hero__background" aria-hidden="true"></div>
+    <div class="auto-hero__overlay" aria-hidden="true"></div>
+    <div class="auto-hero__glow" aria-hidden="true"></div>
+    <div class="auto-hero__lines" aria-hidden="true"></div>
+
+    <div class="auto-hero__container">
+
+        
+
+        <!-- Hero content -->
+        <div class="auto-hero__content">
+
+            <div class="auto-hero__eyebrow">
+                <span class="auto-hero__eyebrow-line"></span>
+                THE SMARTER WAY TO BUY USED CARS
+            </div>
+
+            <h1 class="auto-hero__title">
+                Find Your Perfect
+                <span>Pre-Owned Car.</span>
+            </h1>
+
+            <p class="auto-hero__description">
+                Discover quality pre-owned cars, compare your options,
+                and find the right drive for your lifestyle and budget.
+            </p>
+
+            <!-- Search form -->
+            <form class="auto-hero__search" id="heroCarSearch" action="buy.html">
+                <span class="auto-hero__search-icon" aria-hidden="true">⌕</span>
+
+                <label class="auto-hero__sr-only" for="heroSearchInput">
+                    Search by make, model, or keyword
+                </label>
+
+                <input
+                    type="search"
+                    id="heroSearchInput"
+                    name="q"
+                    placeholder="Search Honda City, Hyundai Creta, BMW..."
+                    autocomplete="off">
+
+                <button type="submit" class="auto-hero__search-button">
+                    Explore Cars
+                    <span aria-hidden="true">↗</span>
+                </button>
+            </form>
+
+            <!-- Quick search suggestions -->
+            <div class="auto-hero__quick-search">
+                <span class="auto-hero__quick-label">Popular searches</span>
+                <button type="button" class="auto-hero__quick-link"
+                        data-search="SUV">SUVs</button>
+                <span class="auto-hero__separator">/</span>
+                <button type="button" class="auto-hero__quick-link"
+                        data-search="Honda">Honda</button>
+                <span class="auto-hero__separator">/</span>
+                <button type="button" class="auto-hero__quick-link"
+                        data-search="Hyundai">Hyundai</button>
+                <span class="auto-hero__separator">/</span>
+                <button type="button" class="auto-hero__quick-link"
+                        data-search="Automatic">Automatic</button>
+            </div>
+
+            <!-- Trust highlights -->
+            <div class="auto-hero__trust">
+                <div class="auto-hero__trust-item">
+                    <span class="auto-hero__trust-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <strong>Verified Listings</strong>
+                        <span>Find clearly verified vehicles</span>
+                    </div>
+                </div>
+
+                <div class="auto-hero__trust-item">
+                    <span class="auto-hero__trust-icon" aria-hidden="true">⌕</span>
+                    <div>
+                        <strong>Smart Discovery</strong>
+                        <span>Search your way</span>
+                    </div>
+                </div>
+
+                <div class="auto-hero__trust-item">
+                    <span class="auto-hero__trust-icon" aria-hidden="true">↗</span>
+                    <div>
+                        <strong>More Choice</strong>
+                        <span>Explore cars for your budget</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom scroll indicator -->
+        <a href="buy.html" class="auto-hero__scroll">
+            DISCOVER MORE
+            <span aria-hidden="true">↓</span>
+        </a>
+
+    </div>
+</section>
+
+   
+
+
+<section class="available-cars-section" id="available-cars">
+    <div class="cars-container">
+
+        <div class="cars-heading-row">
+            <div class="cars-heading">
+                <span class="eyebrow">YOUR NEXT DRIVE STARTS HERE</span>
+                <h1>Available <span>Used Cars</span></h1>
+                <p>Explore quality pre-owned cars selected for your next journey.</p>
+            </div>
+
+            
+        </div>
+
+        <div class="listing-toolbar">
+            <div class="listing-count">
+                <strong id="visibleCount">6</strong>
+                <span>cars available</span>
+            </div>
+
+            <div class="sort-control">
+                <label for="sortCars">Sort by</label>
+                <select id="sortCars">
+                    <option value="relevance">Relevance</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest Listings</option>
+                    <option value="mileage">Lowest Kilometres</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cars-grid" id="carsGrid">
+
+            <article class="car-card"
+                data-price="625000" data-year="2022" data-km="28000"
+                data-listed="6" data-relevance="6">
+
+                <div class="car-image-wrap">
+                    <img src="images/hond city.jpg"
+                         alt="Red performance coupe" loading="lazy">
+                    <span class="verified-badge">✓ Verified</span>
+                    <button class="wishlist-btn" type="button"
+                            aria-label="Add Honda City to wishlist"
+                            aria-pressed="false">♡</button>
+                    <span class="image-tag">Featured</span>
+                </div>
+
+                <div class="car-content">
+                    <div class="car-title-row">
+                        <div>
+                            <p class="car-make">Honda</p>
+                            <h2>City ZX</h2>
+                            <p class="car-variant">1.5 i-VTEC CVT • ZX Variant</p>
+                        </div>
+                        <div class="car-price">₹6.25 L</div>
+                    </div>
+
+                    <div class="car-specs">
+                        <span>📅 2022</span>
+                        <span>◉ 28,000 km</span>
+                        <span>⛽ Petrol</span>
+                        <span>⚙ Automatic</span>
+                    </div>
+
+                    <div class="car-location">⌖ Hyderabad, Telangana</div>
+
+                    <div class="car-card-footer">
+                        <span class="owner-label">1st Owner</span>
+                        <a class="details-btn" href="buy.html">
+                            View Details <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card"
+                data-price="780000" data-year="2023" data-km="19000"
+                data-listed="5" data-relevance="5">
+
+                <div class="car-image-wrap">
+                    <img src="images/creta.jpg"
+                         alt="Modern luxury SUV" loading="lazy">
+                    <span class="verified-badge">✓ Verified</span>
+                    <button class="wishlist-btn" type="button"
+                            aria-label="Add Hyundai Creta to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+
+                <div class="car-content">
+                    <div class="car-title-row">
+                        <div>
+                            <p class="car-make">Hyundai</p>
+                            <h2>Creta SX</h2>
+                            <p class="car-variant">1.5 Petrol • SX Variant</p>
+                        </div>
+                        <div class="car-price">₹7.80 L</div>
+                    </div>
+
+                    <div class="car-specs">
+                        <span>📅 2023</span>
+                        <span>◉ 19,000 km</span>
+                        <span>⛽ Petrol</span>
+                        <span>⚙ Manual</span>
+                    </div>
+
+                    <div class="car-location">⌖ Bengaluru, Karnataka</div>
+
+                    <div class="car-card-footer">
+                        <span class="owner-label">1st Owner</span>
+                        <a class="details-btn" href="buy.html">
+                            View Details <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card"
+                data-price="485000" data-year="2021" data-km="36000"
+                data-listed="4" data-relevance="4">
+
+                <div class="car-image-wrap">
+                    <img src="images/baleno.jpg"
+                         alt="Compact city hatchback" loading="lazy">
+                    <button class="wishlist-btn" type="button"
+                            aria-label="Add Maruti Suzuki Baleno to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+
+                <div class="car-content">
+                    <div class="car-title-row">
+                        <div>
+                            <p class="car-make">Maruti Suzuki</p>
+                            <h2>Baleno Alpha</h2>
+                            <p class="car-variant">1.2 DualJet • Alpha Variant</p>
+                        </div>
+                        <div class="car-price">₹4.85 L</div>
+                    </div>
+
+                    <div class="car-specs">
+                        <span>📅 2021</span>
+                        <span>◉ 36,000 km</span>
+                        <span>⛽ Petrol</span>
+                        <span>⚙ Manual</span>
+                    </div>
+
+                    <div class="car-location">⌖ Hyderabad, Telangana</div>
+
+                    <div class="car-card-footer">
+                        <span class="owner-label">1st Owner</span>
+                        <a class="details-btn" href="buy.html">
+                            View Details <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card"
+                data-price="1120000" data-year="2024" data-km="12000"
+                data-listed="3" data-relevance="3">
+
+                <div class="car-image-wrap">
+                    <img src="images/urban cru.jpg"
+                         alt="Premium utility vehicle" loading="lazy">
+                    <span class="verified-badge">✓ Verified</span>
+                    <button class="wishlist-btn" type="button"
+                            aria-label="Add Toyota SUV to wishlist"
+                            aria-pressed="false">♡</button>
+                    <span class="image-tag">Low Mileage</span>
+                </div>
+
+                <div class="car-content">
+                    <div class="car-title-row">
+                        <div>
+                            <p class="car-make">Toyota</p>
+                            <h2>Urban Cruiser</h2>
+                            <p class="car-variant">1.5 Premium • Automatic</p>
+                        </div>
+                        <div class="car-price">₹11.20 L</div>
+                    </div>
+
+                    <div class="car-specs">
+                        <span>📅 2024</span>
+                        <span>◉ 12,000 km</span>
+                        <span>⛽ Petrol</span>
+                        <span>⚙ Automatic</span>
+                    </div>
+
+                    <div class="car-location">⌖ Chennai, Tamil Nadu</div>
+
+                    <div class="car-card-footer">
+                        <span class="owner-label">1st Owner</span>
+                        <a class="details-btn" href="buy.html">
+                            View Details <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card"
+                data-price="550000" data-year="2020" data-km="52000"
+                data-listed="2" data-relevance="2">
+
+                <div class="car-image-wrap">
+                    <img src="images/polo.jpg"
+                         alt="Sporty silver luxury car" loading="lazy">
+                    <button class="wishlist-btn" type="button"
+                            aria-label="Add Volkswagen Polo to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+
+                <div class="car-content">
+                    <div class="car-title-row">
+                        <div>
+                            <p class="car-make">Volkswagen</p>
+                            <h2>Polo Highline</h2>
+                            <p class="car-variant">1.0 TSI • Highline Plus</p>
+                        </div>
+                        <div class="car-price">₹5.50 L</div>
+                    </div>
+
+                    <div class="car-specs">
+                        <span>📅 2020</span>
+                        <span>◉ 52,000 km</span>
+                        <span>⛽ Petrol</span>
+                        <span>⚙ Manual</span>
+                    </div>
+
+                    <div class="car-location">⌖ Pune, Maharashtra</div>
+
+                    <div class="car-card-footer">
+                        <span class="owner-label">2nd Owner</span>
+                        <a class="details-btn" href="buy.html">
+                            View Details <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card"
+                data-price="925000" data-year="2023" data-km="24000"
+                data-listed="1" data-relevance="1">
+
+                <div class="car-image-wrap">
+                    <img src="images/bmw.jpg"
+                         alt="Luxury executive sedan" loading="lazy">
+                    <span class="verified-badge">✓ Verified</span>
+                    <button class="wishlist-btn" type="button"
+                            aria-label="Add BMW sedan to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+
+                <div class="car-content">
+                    <div class="car-title-row">
+                        <div>
+                            <p class="car-make">BMW</p>
+                            <h2>3 Series</h2>
+                            <p class="car-variant">320d Sport • Luxury Line</p>
+                        </div>
+                        <div class="car-price">₹9.25 L</div>
+                    </div>
+
+                    <div class="car-specs">
+                        <span>📅 2023</span>
+                        <span>◉ 24,000 km</span>
+                        <span>⛽ Diesel</span>
+                        <span>⚙ Automatic</span>
+                    </div>
+
+                    <div class="car-location">⌖ Hyderabad, Telangana</div>
+
+                    <div class="car-card-footer">
+                        <span class="owner-label">1st Owner</span>
+                        <a class="details-btn" href="buy.html">
+                            View Details <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+            <span class="empty-icon">⌕</span>
+            <h2>No cars found</h2>
+            <p>Try changing the sorting option or check back later.</p>
+        </div>
+
+        
+    </div>
+</section>
+
+
+<section class="featured-cars-section" id="featured-cars">
+    <div class="featured-container">
+
+        <div class="featured-header">
+            <div class="featured-heading">
+                <span class="featured-eyebrow">THE AUTOVELLE EDIT</span>
+                <h2>Featured <span> Trending Cars</span> </h2>
+                <p>Standout drives, popular picks, and fresh arrivals worth a closer look.</p>
+            </div>
+
+            
+        </div>
+
+        <div class="featured-slider-toolbar">
+            <div class="featured-tabs" aria-label="Featured car categories">
+                <button class="featured-tab is-active" type="button"
+                        data-category="all" aria-pressed="true">All Picks</button>
+                <button class="featured-tab" type="button"
+                        data-category="featured" aria-pressed="false">Featured</button>
+                <button class="featured-tab" type="button"
+                        data-category="new" aria-pressed="false">New Listings</button>
+                <button class="featured-tab" type="button"
+                        data-category="trending" aria-pressed="false">Trending</button>
+            </div>
+
+            <div class="slider-controls">
+                <button type="button" class="slider-arrow"
+                        id="featuredPrev" aria-label="Scroll to previous cars">←</button>
+                <button type="button" class="slider-arrow"
+                        id="featuredNext" aria-label="Scroll to next cars">→</button>
+            </div>
+        </div>
+
+        <div class="featured-slider" id="featuredSlider"
+             tabindex="0" aria-label="Featured car listings">
+
+            <!-- Featured label: use only for vehicles genuinely selected by your team -->
+            <article class="featured-car-card"
+                     data-category="featured trending">
+                <div class="featured-image">
+                    <img src="images/city zx.jpg"
+                         alt="Red sports coupe" loading="lazy">
+                    <span class="featured-badge">Featured</span>
+                    <button type="button" class="featured-wishlist"
+                            aria-label="Add Honda City to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+                <div class="featured-card-content">
+                    <div class="featured-car-meta">
+                        <span>HONDA</span><span>2022</span>
+                    </div>
+                    <h3>City ZX</h3>
+                    <p class="featured-variant">1.5 i-VTEC CVT · Petrol</p>
+                    <div class="featured-price-row">
+                        <strong>₹6.25 L</strong>
+                        <span>28,000 km</span>
+                    </div>
+                    <div class="featured-location">⌖ Hyderabad, Telangana</div>
+                    <a href="buy.html"
+                       class="featured-details-btn">View Details <span>↗</span></a>
+                </div>
+            </article>
+
+            <!-- New Listing: use only when the vehicle was recently added -->
+            <article class="featured-car-card" data-category="new">
+                <div class="featured-image">
+                    <img src="images/creta sx.jpg"
+                         alt="Modern SUV" loading="lazy">
+                    <span class="featured-badge badge-new">New Listing</span>
+                    <button type="button" class="featured-wishlist"
+                            aria-label="Add Hyundai Creta to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+                <div class="featured-card-content">
+                    <div class="featured-car-meta">
+                        <span>HYUNDAI</span><span>2024</span>
+                    </div>
+                    <h3>Creta SX</h3>
+                    <p class="featured-variant">1.5 Petrol · Manual</p>
+                    <div class="featured-price-row">
+                        <strong>₹9.10 L</strong>
+                        <span>14,500 km</span>
+                    </div>
+                    <div class="featured-location">⌖ Bengaluru, Karnataka</div>
+                    <a href="buy.html"
+                       class="featured-details-btn">View Details <span>↗</span></a>
+                </div>
+            </article>
+
+            <!-- Trending: use only when supported by popularity or engagement data -->
+            <article class="featured-car-card" data-category="trending">
+                <div class="featured-image">
+                    <img src="images/brown urban.jpg"
+                         alt="Premium family SUV" loading="lazy">
+                    <span class="featured-badge badge-trending">Trending</span>
+                    <button type="button" class="featured-wishlist"
+                            aria-label="Add Toyota SUV to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+                <div class="featured-card-content">
+                    <div class="featured-car-meta">
+                        <span>TOYOTA</span><span>2023</span>
+                    </div>
+                    <h3>Urban Cruiser</h3>
+                    <p class="featured-variant">1.5 Premium · Automatic</p>
+                    <div class="featured-price-row">
+                        <strong>₹11.20 L</strong>
+                        <span>22,000 km</span>
+                    </div>
+                    <div class="featured-location">⌖ Chennai, Tamil Nadu</div>
+                    <a href="buy.html"
+                       class="featured-details-btn">View Details <span>↗</span></a>
+                </div>
+            </article>
+
+            <!-- Price Reduced: display only when the previous price is verified -->
+            <article class="featured-car-card" data-category="featured">
+                <div class="featured-image">
+                    <img src="images/polo.jpg"
+                         alt="Sporty luxury coupe" loading="lazy">
+                    <span class="featured-badge badge-price">Price Reduced</span>
+                    <button type="button" class="featured-wishlist"
+                            aria-label="Add Volkswagen Polo to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+                <div class="featured-card-content">
+                    <div class="featured-car-meta">
+                        <span>VOLKSWAGEN</span><span>2021</span>
+                    </div>
+                    <h3>Polo Highline</h3>
+                    <p class="featured-variant">1.0 TSI · Manual</p>
+                    <div class="featured-price-row">
+                        <strong>₹5.50 L</strong>
+                        <span>32,000 km</span>
+                    </div>
+                    <div class="featured-location">⌖ Pune, Maharashtra</div>
+                    <a href="buy.html"
+                       class="featured-details-btn">View Details <span>↗</span></a>
+                </div>
+            </article>
+
+            <article class="featured-car-card" data-category="new trending">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=85"
+                         alt="Executive luxury sedan" loading="lazy">
+                    <span class="featured-badge badge-new">New Listing</span>
+                    <button type="button" class="featured-wishlist"
+                            aria-label="Add BMW 3 Series to wishlist"
+                            aria-pressed="false">♡</button>
+                </div>
+                <div class="featured-card-content">
+                    <div class="featured-car-meta">
+                        <span>BMW</span><span>2023</span>
+                    </div>
+                    <h3>3 Series</h3>
+                    <p class="featured-variant">320d Sport · Automatic</p>
+                    <div class="featured-price-row">
+                        <strong>₹9.25 L</strong>
+                        <span>24,000 km</span>
+                    </div>
+                    <div class="featured-location">⌖ Hyderabad, Telangana</div>
+                    <a href="buy.html"
+                       class="featured-details-btn">View Details <span>↗</span></a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="featured-bottom">
+            <p>Curated cars. More confident journeys.</p>
+            <div class="slider-progress" aria-hidden="true">
+                <span id="featuredProgress"></span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="emi-section" id="emi-calculator">
+    <div class="emi-container">
+
+        <!-- Section Heading -->
+        <div class="emi-heading">
+            <div class="emi-heading-content">
+                <span class="emi-eyebrow">PLAN YOUR PURCHASE</span>
+
+                <h1>Car Finance & <span>EMI Calculator</span></h1>
+
+                <p>
+                    Find out what your dream car could cost each month.
+                    Adjust your loan details and explore a budget that
+                    works for you.
+                </p>
+            </div>
+
+           
+        </div>
+
+        <!-- Calculator Layout -->
+        <div class="emi-layout">
+
+            <!-- Calculator Inputs -->
+            <div class="emi-calculator-card">
+
+                <div class="emi-card-heading">
+                    <div class="emi-heading-icon" aria-hidden="true">₹</div>
+
+                    <div>
+                        <h2>Calculate Your EMI</h2>
+                        <p>Customize your loan details below.</p>
+                    </div>
+                </div>
+
+                <!-- Car Price -->
+                <div class="emi-field">
+                    <div class="emi-label-row">
+                        <label for="carPrice">Car Price</label>
+                        <span class="emi-field-value" id="carPriceValue">₹12,00,000</span>
+                    </div>
+
+                    <input type="range" id="carPrice"
+                           min="100000" max="10000000" step="10000"
+                           value="1200000">
+
+                    <div class="emi-range-labels">
+                        <span>₹1 Lakh</span>
+                        <span>₹1 Crore</span>
+                    </div>
+
+                    <input type="number" id="carPriceNumber"
+                           min="100000" max="10000000" step="10000"
+                           value="1200000" class="emi-number-input"
+                           aria-label="Car price in rupees">
+                </div>
+
+                <!-- Down Payment -->
+                <div class="emi-field">
+                    <div class="emi-label-row">
+                        <label for="downPayment">Down Payment</label>
+                        <span class="emi-field-value" id="downPaymentValue">₹2,00,000</span>
+                    </div>
+
+                    <input type="range" id="downPayment"
+                           min="0" max="10000000" step="10000"
+                           value="200000">
+
+                    <div class="emi-range-labels">
+                        <span>₹0</span>
+                        <span id="downPaymentMaxLabel">Up to ₹12,00,000</span>
+                    </div>
+
+                    <p class="emi-helper">
+                        <span id="downPaymentPercent">16.7%</span> of the car price
+                    </p>
+                </div>
+
+                <!-- Interest Rate -->
+                <div class="emi-field">
+                    <div class="emi-label-row">
+                        <label for="interestRate">Annual Interest Rate</label>
+                        <span class="emi-field-value" id="interestRateValue">9.5%</span>
+                    </div>
+
+                    <input type="range" id="interestRate"
+                           min="5" max="20" step="0.1" value="9.5">
+
+                    <div class="emi-range-labels">
+                        <span>5%</span>
+                        <span>20%</span>
+                    </div>
+                </div>
+
+                <!-- Loan Tenure -->
+                <div class="emi-field">
+                    <div class="emi-label-row">
+                        <label for="loanTenure">Loan Tenure</label>
+                        <span class="emi-field-value" id="loanTenureValue">5 Years</span>
+                    </div>
+
+                    <input type="range" id="loanTenure"
+                           min="1" max="7" step="1" value="5">
+
+                    <div class="emi-range-labels">
+                        <span>1 Year</span>
+                        <span>7 Years</span>
+                    </div>
+                </div>
+
+                <div class="emi-loan-summary">
+                    <div>
+                        <span>Loan Amount</span>
+                        <strong id="loanAmount">₹10,00,000</strong>
+                    </div>
+
+                    <div>
+                        <span>Loan-to-Value</span>
+                        <strong id="loanToValue">83.3%</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Results Panel -->
+            <div class="emi-result-card">
+
+                <div class="emi-result-top">
+                    <span class="emi-result-badge">
+                        <span class="emi-status-dot"></span>
+                        YOUR ESTIMATED PAYMENT
+                    </span>
+
+                    <div class="emi-car-decoration" aria-hidden="true">
+                        <svg viewBox="0 0 320 125" fill="none">
+                            <path d="M28 79L43 56C47 49 53 45 62 43L100 35L125 17C130 12 137 10 146 10H210C221 10 230 15 237 24L255 47L280 57C288 60 294 67 296 76L300 88H20L28 79Z"
+                                  fill="currentColor" opacity=".12"/>
+                            <path d="M61 43L100 35L125 17C130 12 137 10 146 10H210C221 10 230 15 237 24L255 47L61 43Z"
+                                  fill="currentColor" opacity=".32"/>
+                            <path d="M110 36L132 19H207C217 19 225 23 231 31L244 45L110 36Z"
+                                  fill="currentColor" opacity=".7"/>
+                            <path d="M28 79L43 56C47 49 53 45 62 43L100 35L125 17C130 12 137 10 146 10H210C221 10 230 15 237 24L255 47L280 57C288 60 294 67 296 76L300 88H20L28 79Z"
+                                  stroke="currentColor" stroke-width="3"/>
+                            <path d="M23 70H49M274 70H298" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="78" cy="88" r="18" fill="#102A43" stroke="currentColor" stroke-width="4"/>
+                            <circle cx="78" cy="88" r="7" fill="#E31E24"/>
+                            <circle cx="249" cy="88" r="18" fill="#102A43" stroke="currentColor" stroke-width="4"/>
+                            <circle cx="249" cy="88" r="7" fill="#E31E24"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="emi-main-result">
+                    <p>Estimated Monthly EMI</p>
+
+                    <h2 id="monthlyEMI" aria-live="polite">₹21,000</h2>
+
+                    <span class="emi-result-caption">
+                        A monthly estimate based on your inputs
+                    </span>
+                </div>
+
+                <!-- Breakdown -->
+                <div class="emi-breakdown">
+                    <div class="emi-breakdown-item">
+                        <span>Loan Amount</span>
+                        <strong id="resultLoanAmount">₹10,00,000</strong>
+                    </div>
+
+                    <div class="emi-breakdown-item">
+                        <span>Total Interest</span>
+                        <strong id="totalInterest">₹2,90,000</strong>
+                    </div>
+
+                    <div class="emi-breakdown-item">
+                        <span>Total Loan Repayment</span>
+                        <strong id="totalRepayment">₹12,90,000</strong>
+                    </div>
+
+                    <div class="emi-breakdown-item">
+                        <span>Down Payment</span>
+                        <strong id="resultDownPayment">₹2,00,000</strong>
+                    </div>
+                </div>
+
+                <!-- Payment Composition -->
+                <div class="emi-composition">
+                    <div class="emi-composition-label">
+                        <span>Principal</span>
+                        <span>Interest</span>
+                    </div>
+
+                    <div class="emi-composition-bar">
+                        <span class="emi-principal-bar" id="principalBar"></span>
+                        <span class="emi-interest-bar" id="interestBar"></span>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="emi-cta">
+                    Explore Financing Options
+                    <span aria-hidden="true">→</span>
+                </a>
+
+                <p class="emi-disclaimer">
+                    <strong>Disclaimer:</strong> This calculator provides
+                    indicative estimates only. Actual EMI, interest rates,
+                    eligibility, fees, and loan approval depend on lender
+                    terms, your credit profile, and applicable charges.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Trust Note -->
+        <div class="emi-bottom-note">
+            <span class="emi-info-icon" aria-hidden="true">i</span>
+            <p>
+                Use these estimates to plan your budget. Confirm the final
+                repayment schedule and all applicable charges with your lender.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="autovelle-final-cta" id="final-cta">
+
+    <!-- Decorative background -->
+    <div class="final-cta-glow glow-one" aria-hidden="true"></div>
+    <div class="final-cta-glow glow-two" aria-hidden="true"></div>
+
+    <div class="final-cta-ring ring-one" aria-hidden="true"></div>
+    <div class="final-cta-ring ring-two" aria-hidden="true"></div>
+
+    <div class="final-cta-container">
+
+        <div class="final-cta-content">
+
+            <span class="final-cta-eyebrow">
+                <span class="cta-eyebrow-line"></span>
+                YOUR JOURNEY. YOUR CHOICE.
+                <span class="cta-eyebrow-line"></span>
+            </span>
+
+            <h2>
+                Your Next Journey
+                <span>Starts With Us.</span>
+            </h2>
+
+            <p>
+                Find the car that fits your lifestyle or help someone
+                discover their next great ride. Your next chapter
+                begins with AutoVelle.
+            </p>
+
+            <div class="final-cta-buttons">
+
+                <a href="buy.html" class="final-cta-btn cta-explore">
+                    <span>Explore Cars</span>
+                    <span class="cta-btn-icon" aria-hidden="true">→</span>
+                </a>
+
+                <a href="sell.html" class="final-cta-btn cta-sell">
+                    <span>Sell Your Car</span>
+                    <span class="cta-btn-icon" aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+
+            <div class="final-cta-trust">
+
+                <div class="cta-trust-item">
+                    <span class="cta-trust-icon" aria-hidden="true">✓</span>
+                    <span>Find Your Perfect Match</span>
+                </div>
+
+                <span class="cta-trust-divider" aria-hidden="true"></span>
+
+                <div class="cta-trust-item">
+                    <span class="cta-trust-icon" aria-hidden="true">✓</span>
+                    <span>Sell With Confidence</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="final-cta-bottom-line">
+            <span>DRIVE YOUR DREAMS</span>
+            <span class="cta-bottom-line" aria-hidden="true"></span>
+            <span>DISCOVER WHAT'S NEXT</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+     <!-- =========================================================
+     CARVIBE FOOTER
+========================================================= -->
+
+<footer class="carvibe-footer">
+
+    <div class="footer-container">
+
+        <!-- ================= BRAND ================= -->
+
+        <div class="footer-brand">
+
+            <!-- LOGO WITH TAGLINE -->
+<a href="index.html" class="carvibe-logo">
+
+    <img
+        src="images/logo website.png"
+        alt="CarVibe Logo"
+        class="logo-image"
+    >
+
+    <div class="logo-text">
+        <span class="logo-name">
+            Car<span class="logo-accent">Vibe</span>
+        </span>
+
+        <span class="logo-tagline">Find Your Drive</span>
+    </div>
+
+</a>
+
+            <p class="footer-description">
+                Find your next drive with confidence. CarVibe makes
+                buying and selling quality used cars simple, transparent,
+                and hassle-free.
+            </p>
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= QUICK LINKS ================= -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="home1.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="buy.html">
+                        Browse Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="sell.html">
+                        Sell Your Car
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Our Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= MARKETPLACE ================= -->
+
+        <div class="footer-column">
+
+            <h3>Marketplace</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Latest Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Featured Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Budget Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Luxury Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        SUVs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Electric Cars
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= SUPPORT ================= -->
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Help Center
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Buying Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Selling Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Safety & Trust
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <div class="footer-newsletter">
+
+            <h3>Stay In The Driver's Seat</h3>
+
+            <p>
+                Get the latest car deals, marketplace updates
+                and automotive tips directly in your inbox.
+            </p>
+
+
+            <form class="newsletter-form">
+
+                <div class="newsletter-input">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-contact">
+
+                <a href="tel:+919876543210">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </a>
+
+                <a href="mailto:hello@carvibe.com">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <span>
+                        hello@carvibe.com
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER BOTTOM ================= -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p>
+                © 2026 CarVibe. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Cookies
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="buy.js"></script>
+    <script src="header.js"></script>
+
+</body>
+
+</html>

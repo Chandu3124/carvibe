@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E31E24">
+    <title>Create Account | CarVibe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+<main class="cv-signup-page">
+
+    <!-- Left automotive image panel -->
+    <section class="cv-signup-visual">
+        <div class="cv-signup-bg"></div>
+        <div class="cv-signup-overlay"></div>
+
+        
+
+        <div class="cv-signup-visual-content">
+            <span class="cv-visual-badge">
+                <i class="fa-solid fa-road"></i>
+                YOUR JOURNEY STARTS HERE
+            </span>
+
+            <h1>Find your next
+                <span>great drive.</span>
+            </h1>
+
+            <p>
+                Discover quality pre-owned cars, connect with trusted
+                sellers, and make your next move with confidence.
+            </p>
+
+            <div class="cv-signup-highlights">
+                <div class="cv-signup-highlight">
+                    <span class="highlight-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </span>
+                    <div>
+                        <strong>Trusted Vehicles</strong>
+                        <small>Shop with more confidence</small>
+                    </div>
+                </div>
+
+                <div class="cv-signup-highlight">
+                    <span class="highlight-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </span>
+                    <div>
+                        <strong>More Choices</strong>
+                        <small>Find a car that fits your life</small>
+                    </div>
+                </div>
+
+                <div class="cv-signup-highlight">
+                    <span class="highlight-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </span>
+                    <div>
+                        <strong>Simple Connections</strong>
+                        <small>Connect with vehicle sellers</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-visual-bottom">
+            <span><i class="fa-solid fa-location-arrow"></i> Find your drive</span>
+            <span>Built for every journey.</span>
+        </div>
+    </section>
+
+    <!-- Right signup panel -->
+    <section class="cv-signup-panel">
+
+        <div class="cv-signup-topbar">
+            <button type="button" class="cv-signup-control"
+                    id="cv-signup-rtl" aria-label="Switch to RTL"
+                    title="Toggle text direction">
+                <i class="fa-solid fa-align-right"></i>
+                <span>RTL</span>
+            </button>
+
+            <button type="button" class="cv-signup-control"
+                    id="cv-signup-theme" aria-label="Switch to dark mode"
+                    title="Toggle dark mode">
+                <i class="fa-solid fa-moon" id="cv-signup-theme-icon"></i>
+            </button>
+        </div>
+
+        <div class="cv-signup-form-container">
+
+<a href="index.html" class="cv-signup-logo">
+    <img
+        src="images/logo website.png"
+        alt="CarVibe Logo"
+        class="logo-image"
+    >
+
+    <div class="logo-text">
+        <span class="logo-name">
+            Car<span class="logo-accent">Vibe</span>
+        </span>
+
+        <span class="logo-tagline">Find Your Drive</span>
+    </div>
+</a>
+
+
+
+           
+
+            <div class="cv-signup-heading">
+                <span class="cv-signup-eyebrow">
+                    <span></span> JOIN THE COMMUNITY
+                </span>
+
+                <h2>Create your <em>account.</em></h2>
+                <p>A few details, and you're ready to hit the road.</p>
+            </div>
+
+            <form id="cv-signup-form" class="cv-signup-form" novalidate>
+
+                <!-- Full name -->
+                <div class="cv-signup-field">
+                    <label for="cv-signup-name">Full Name</label>
+
+                    <div class="cv-signup-input-wrap">
+                        <i class="fa-regular fa-user cv-signup-input-icon"
+                           aria-hidden="true"></i>
+                        <input type="text" id="cv-signup-name"
+                               name="name" placeholder="Enter your full name"
+                               autocomplete="name" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="cv-signup-field">
+                    <label for="cv-signup-email">Email Address</label>
+
+                    <div class="cv-signup-input-wrap">
+                        <i class="fa-regular fa-envelope cv-signup-input-icon"
+                           aria-hidden="true"></i>
+                        <input type="email" id="cv-signup-email"
+                               name="email" placeholder="you@example.com"
+                               autocomplete="email" required>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="cv-signup-field">
+                    <label for="cv-signup-phone">
+                        Phone Number <span class="optional">(Optional)</span>
+                    </label>
+
+                    <div class="cv-signup-input-wrap">
+                        <i class="fa-solid fa-phone cv-signup-input-icon"
+                           aria-hidden="true"></i>
+                        <input type="tel" id="cv-signup-phone"
+                               name="phone" placeholder="Enter your phone number"
+                               autocomplete="tel">
+                    </div>
+                </div>
+
+                <!-- Password: ONE eye button -->
+                <div class="cv-signup-field">
+                    <label for="cv-signup-password">Password</label>
+
+                    <div class="cv-signup-input-wrap cv-signup-password-wrap">
+                        <i class="fa-solid fa-lock cv-signup-input-icon"
+                           aria-hidden="true"></i>
+
+                        <input type="password" id="cv-signup-password"
+                               name="password" placeholder="Create a password"
+                               autocomplete="new-password"
+                               minlength="8" required>
+
+                        
+                    </div>
+
+                    <div class="cv-password-hint">
+                        <span class="cv-password-hint-line"></span>
+                        <span>Use at least 8 characters</span>
+                    </div>
+                </div>
+
+                <!-- Confirm password: ONE eye button -->
+                <div class="cv-signup-field">
+                    <label for="cv-signup-confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <div class="cv-signup-input-wrap cv-signup-password-wrap">
+                        <i class="fa-solid fa-shield-halved cv-signup-input-icon"
+                           aria-hidden="true"></i>
+
+                        <input type="password"
+                               id="cv-signup-confirm-password"
+                               name="confirmPassword"
+                               placeholder="Re-enter your password"
+                               autocomplete="new-password" required>
+
+                       
+                    </div>
+                </div>
+
+                <!-- Terms -->
+                <div class="cv-signup-terms">
+                    <input type="checkbox" id="cv-signup-terms"
+                           name="terms" required>
+                    <label for="cv-signup-terms">
+                        I agree to the
+                        <a href="terms.html">Terms of Service</a>
+                        and
+                        <a href="privacy.html">Privacy Policy</a>.
+                    </label>
+                </div>
+
+                <p id="cv-signup-message" class="cv-signup-message"
+                   role="status" aria-live="polite"></p>
+
+                <button type="submit" class="cv-signup-submit">
+                    <span>Create Account</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+
+            </form>
+
+            <div class="cv-signup-socials">
+                <button type="button" class="cv-signup-social"
+                        id="cv-google-login">
+                    <i class="fa-brands fa-google google-icon"></i>
+                    <span>Continue with Google</span>
+                </button>
+
+                <button type="button" class="cv-signup-social"
+                        id="cv-apple-login">
+                    <i class="fa-brands fa-apple apple-icon"></i>
+                    <span>Continue with Apple</span>
+                </button>
+            </div>
+
+            <div class="cv-signup-divider">
+                <span></span>
+                <small>ALREADY A MEMBER?</small>
+                <span></span>
+            </div>
+
+            <a href="login.html" class="cv-signup-login-link">
+                Sign In to Your Account
+                <i class="fa-solid fa-arrow-up-right-from-square"
+                   aria-hidden="true"></i>
+            </a>
+
+            <div class="cv-signup-security">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Your information deserves to be protected.</span>
+            </div>
+
+        </div>
+
+        <footer class="cv-signup-footer">
+            <span>© 2026 CarVibe</span>
+            <div>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </footer>
+
+    </section>
+</main>
+
+<script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CARVIBE | Used Car Marketplace</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="global.css">
+<link rel="stylesheet"  href="sell.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="carvibe-header" id="carvibeHeader">
+
+        <div class="header-container">
+
+            <!-- ================= LOGO ================= -->
+
+            <!-- LOGO WITH TAGLINE -->
+<a href="index.html" class="carvibe-logo">
+
+    <img
+        src="images/logo website.png"
+        alt="CarVibe Logo"
+        class="logo-image"
+    >
+
+    <div class="logo-text">
+        <span class="logo-name">
+            Car<span class="logo-accent">Vibe</span>
+        </span>
+
+        <span class="logo-tagline">Find Your Drive</span>
+    </div>
+
+</a>
+
+
+            <!-- ================= NAVIGATION ================= -->
+
+            <nav class="main-nav" id="mainNav">
+
+                <!-- HOME DROPDOWN -->
+                <div class="dropdown">
+
+                    <a href="index.html" class="dropdown-toggle">
+
+                        Home
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            Home 1
+                        </a>
+
+                        <a href="home1.html">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a href="buy.html">
+                    Buy Cars
+                </a>
+
+                <a href="sell.html">
+                    Sell Your Car
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <!-- ================= HEADER ACTIONS ================= -->
+
+            <div class="header-actions">
+
+                <!-- RTL BUTTON -->
+                <button
+                    class="header-icon-btn rtl-btn"
+                    id="rtlToggle"
+                    aria-label="Toggle RTL">
+
+                    RTL
+
+                </button>
+
+
+                <!-- DARK MODE -->
+                <button
+                    class="header-icon-btn"
+                    id="darkToggle"
+                    aria-label="Toggle Dark Mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- LOGIN -->
+                <a
+                    href="login.html"
+                    class="login-btn">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>
+                        Login
+                    </span>
+
+                </a>
+
+
+                <!-- MOBILE MENU -->
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open Menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+<section class="sell-hero">
+    <div class="sell-hero-content">
+
+        <span class="sell-badge">
+            <span class="badge-dot"></span>
+            SELL YOUR CAR WITH CARVIBE
+        </span>
+
+        <h1>
+            Sell Your Car.<br>
+            <span>Get the Value</span><br>
+            You Deserve.
+        </h1>
+
+        <p class="sell-description">
+            Turn your car into a great deal. Connect with verified buyers,
+            receive competitive offers, and enjoy a simple and transparent
+            selling experience.
+        </p>
+
+        <div class="sell-hero-buttons">
+            <a href="contact.html" class="sell-btn sell-btn-primary">
+                Get Free Valuation
+                <span>↗</span>
+            </a>
+
+            <a href="contact.html" class="sell-btn sell-btn-secondary">
+                List Your Car
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="sell-trust-points">
+            <div class="trust-point">
+                <span class="trust-icon">✓</span>
+                <div>
+                    <h3>Verified Buyers</h3>
+                    <p>Genuine enquiries</p>
+                </div>
+            </div>
+
+            <div class="trust-point">
+                <span class="trust-icon">₹</span>
+                <div>
+                    <h3>Best Market Price</h3>
+                    <p>Competitive offers</p>
+                </div>
+            </div>
+
+            <div class="trust-point">
+                <span class="trust-icon">↗</span>
+                <div>
+                    <h3>Easy Process</h3>
+                    <p>Simple car listing</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sell-hero-visual">
+
+        <div class="sell-visual-circle"></div>
+        <div class="sell-visual-glow"></div>
+
+        <span class="visual-label">
+            YOUR CAR. YOUR PRICE.
+        </span>
+
+        <img
+            src="images/luxury car.jpg"
+            alt="Premium car available for resale"
+            class="sell-car-image"
+        >
+
+       
+
+        <div class="sell-floating-badge">
+            <span class="floating-check">✓</span>
+            <div>
+                <strong>Sell with Confidence</strong>
+                <small>Simple. Secure. Transparent.</small>
+            </div>
+        </div>
+
+        <div class="sell-vertical-text">
+            THE SMARTER WAY TO SELL
+        </div>
+
+    </div>
+</section>
+
+<section class="valuation-section" id="car-valuation">
+    <div class="valuation-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="valuation-content">
+            <span class="valuation-eyebrow">
+                <span class="eyebrow-dot"></span>
+                SMART CAR PRICING
+            </span>
+
+            <h2>
+                Discover What Your
+                <span>Car Is Worth.</span>
+            </h2>
+
+            <p class="valuation-description">
+                Get an indicative market value before listing your vehicle.
+                Enter your car details and understand how its age, mileage,
+                ownership and condition can influence its selling price.
+            </p>
+
+            <div class="valuation-benefits">
+                <div class="valuation-benefit">
+                    <span class="benefit-icon">₹</span>
+                    <div>
+                        <h3>Market-Based Estimate</h3>
+                        <p>Understand your car's potential value.</p>
+                    </div>
+                </div>
+
+                <div class="valuation-benefit">
+                    <span class="benefit-icon">✓</span>
+                    <div>
+                        <h3>Simple & Convenient</h3>
+                        <p>Enter your vehicle details in minutes.</p>
+                    </div>
+                </div>
+
+                <div class="valuation-benefit">
+                    <span class="benefit-icon">↗</span>
+                    <div>
+                        <h3>Ready to List</h3>
+                        <p>Use your estimate as a starting point.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="valuation-note">
+                <span>i</span>
+                <p>
+                    Your final selling price may vary depending on location,
+                    demand, service records and physical inspection.
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="valuation-form-wrapper">
+            <div class="valuation-form-heading">
+                <div>
+                    <span class="form-step">FREE VALUATION</span>
+                    <h3>Tell Us About Your Car</h3>
+                    <p>Complete the details below to get started.</p>
+                </div>
+
+                <div class="form-car-icon">🚘</div>
+            </div>
+
+            <form class="valuation-form" id="valuationForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="brand">Car Brand *</label>
+                        <select id="brand" name="brand" required>
+                            <option value="">Select brand</option>
+                            <option>Maruti Suzuki</option>
+                            <option>Hyundai</option>
+                            <option>Tata</option>
+                            <option>Mahindra</option>
+                            <option>Honda</option>
+                            <option>Toyota</option>
+                            <option>Kia</option>
+                            <option>Volkswagen</option>
+                            <option>Skoda</option>
+                            <option>BMW</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="model">Car Model *</label>
+                        <input
+                            type="text"
+                            id="model"
+                            name="model"
+                            placeholder="e.g. Creta"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variant">Variant</label>
+                        <input
+                            type="text"
+                            id="variant"
+                            name="variant"
+                            placeholder="e.g. SX Petrol"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Manufacturing Year *</label>
+                        <select id="year" name="year" required>
+                            <option value="">Select year</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kilometers">Kilometers Driven *</label>
+                        <div class="input-with-unit">
+                            <input
+                                type="number"
+                                id="kilometers"
+                                name="kilometers"
+                                placeholder="e.g. 45000"
+                                min="0"
+                                max="1000000"
+                                required
+                            >
+                            <span>KM</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fuel">Fuel Type *</label>
+                        <select id="fuel" name="fuel" required>
+                            <option value="">Select fuel</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="cng">CNG</option>
+                            <option value="electric">Electric</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="lpg">LPG</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transmission">Transmission *</label>
+                        <select id="transmission" name="transmission" required>
+                            <option value="">Select transmission</option>
+                            <option value="manual">Manual</option>
+                            <option value="automatic">Automatic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="owners">Previous Owners *</label>
+                        <select id="owners" name="owners" required>
+                            <option value="">Select ownership</option>
+                            <option value="1">First owner</option>
+                            <option value="2">Second owner</option>
+                            <option value="3">Third owner</option>
+                            <option value="4">Fourth or more</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group condition-group">
+                    <label>Overall Vehicle Condition *</label>
+
+                    <div class="condition-options">
+                        <label class="condition-option">
+                            <input type="radio" name="condition" value="excellent" required>
+                            <span class="condition-card">
+                                <span class="condition-emoji">✦</span>
+                                <strong>Excellent</strong>
+                                <small>Like new</small>
+                            </span>
+                        </label>
+
+                        <label class="condition-option">
+                            <input type="radio" name="condition" value="good">
+                            <span class="condition-card">
+                                <span class="condition-emoji">✓</span>
+                                <strong>Good</strong>
+                                <small>Well maintained</small>
+                            </span>
+                        </label>
+
+                        <label class="condition-option">
+                            <input type="radio" name="condition" value="fair">
+                            <span class="condition-card">
+                                <span class="condition-emoji">◷</span>
+                                <strong>Fair</strong>
+                                <small>Some wear</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceHistory">Service History</label>
+                    <select id="serviceHistory" name="serviceHistory">
+                        <option value="unknown">Select service history</option>
+                        <option value="full">Full service records</option>
+                        <option value="partial">Partial service records</option>
+                        <option value="none">No service records</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="valuation-submit">
+                    Estimate My Car's Value
+                    <span>→</span>
+                </button>
+
+                <p class="form-disclaimer">
+                    This demo provides an illustrative estimate, not a verified
+                    market valuation or guaranteed offer.
+                </p>
+
+                <div class="valuation-result" id="valuationResult" aria-live="polite" hidden>
+                    <span class="result-label">Illustrative estimate</span>
+                    <h3 id="estimatedValue">₹ 0</h3>
+                    <p id="estimateSummary"></p>
+                    <button type="button" class="result-reset" id="resetValuation">
+                        Edit vehicle details
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works" id="how-it-works">
+
+    <div class="how-container">
+
+        <!-- SECTION HEADER -->
+        <div class="how-header">
+            <span class="how-eyebrow">
+                <span class="how-eyebrow-dot"></span>
+                SELL YOUR CAR IN 4 EASY STEPS
+            </span>
+
+            <h2>
+                How It <span>Works</span>
+            </h2>
+
+            <p>
+                Selling your car has never been easier. Follow our simple
+                process to list your vehicle, connect with genuine buyers,
+                and complete your sale with confidence.
+            </p>
+        </div>
+
+        <!-- PROCESS TIMELINE -->
+        <div class="how-timeline">
+
+            <!-- STEP 1 -->
+            <article class="how-step">
+                <div class="how-step-top">
+                    <span class="how-step-number">01</span>
+
+                    <div class="how-step-icon">
+                        <svg viewBox="0 0 48 48" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="5" width="28" height="38"
+                                  rx="4" stroke="currentColor"
+                                  stroke-width="2.2"/>
+                            <path d="M17 15H31M17 22H31M17 29H25"
+                                  stroke="currentColor"
+                                  stroke-width="2.2"
+                                  stroke-linecap="round"/>
+                            <path d="M28 35L31 38L38 30"
+                                  stroke="#E31E24"
+                                  stroke-width="2.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="how-step-body">
+                    <span class="how-step-label">STEP ONE</span>
+                    <h3>Add Your Car Details</h3>
+                    <p>
+                        Enter your car's brand, model, year, mileage,
+                        fuel type, and other essential information.
+                    </p>
+                    <span class="how-step-meta">
+                        <span class="meta-dot"></span>
+                        Quick and simple
+                    </span>
+                </div>
+            </article>
+
+            <!-- STEP 2 -->
+            <article class="how-step">
+                <div class="how-step-top">
+                    <span class="how-step-number">02</span>
+
+                    <div class="how-step-icon">
+                        <svg viewBox="0 0 48 48" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="9" width="38" height="30"
+                                  rx="4" stroke="currentColor"
+                                  stroke-width="2.2"/>
+                            <circle cx="16" cy="19" r="3"
+                                    stroke="currentColor"
+                                    stroke-width="2.2"/>
+                            <path d="M7 34L19 24L27 30L33 25L41 33"
+                                  stroke="#E31E24"
+                                  stroke-width="2.2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M35 5V13M31 9H39"
+                                  stroke="currentColor"
+                                  stroke-width="2.2"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="how-step-body">
+                    <span class="how-step-label">STEP TWO</span>
+                    <h3>Upload Photos & Set Price</h3>
+                    <p>
+                        Showcase your vehicle with clear photos and choose
+                        a competitive asking price for your listing.
+                    </p>
+                    <span class="how-step-meta">
+                        <span class="meta-dot"></span>
+                        Make your listing stand out
+                    </span>
+                </div>
+            </article>
+
+            <!-- STEP 3 -->
+            <article class="how-step">
+                <div class="how-step-top">
+                    <span class="how-step-number">03</span>
+
+                    <div class="how-step-icon">
+                        <svg viewBox="0 0 48 48" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 11H41V34H25L16 41V34H7V11Z"
+                                  stroke="currentColor"
+                                  stroke-width="2.2"
+                                  stroke-linejoin="round"/>
+                            <circle cx="16" cy="22" r="1.8"
+                                    fill="#E31E24"/>
+                            <circle cx="24" cy="22" r="1.8"
+                                    fill="#E31E24"/>
+                            <circle cx="32" cy="22" r="1.8"
+                                    fill="#E31E24"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="how-step-body">
+                    <span class="how-step-label">STEP THREE</span>
+                    <h3>Connect With Buyers</h3>
+                    <p>
+                        Receive enquiries from interested buyers, answer
+                        questions, and arrange inspections or test drives.
+                    </p>
+                    <span class="how-step-meta">
+                        <span class="meta-dot"></span>
+                        Direct buyer enquiries
+                    </span>
+                </div>
+            </article>
+
+            <!-- STEP 4 -->
+            <article class="how-step">
+                <div class="how-step-top">
+                    <span class="how-step-number">04</span>
+
+                    <div class="how-step-icon">
+                        <svg viewBox="0 0 48 48" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 5L39 11V22C39 32 32 39 24 43C16 39 9 32 9 22V11L24 5Z"
+                                  stroke="currentColor"
+                                  stroke-width="2.2"
+                                  stroke-linejoin="round"/>
+                            <path d="M16 24L22 30L33 18"
+                                  stroke="#E31E24"
+                                  stroke-width="2.8"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="how-step-body">
+                    <span class="how-step-label">STEP FOUR</span>
+                    <h3>Finalize Your Deal</h3>
+                    <p>
+                        Agree on the price, complete payment and paperwork,
+                        and transfer ownership through the proper process.
+                    </p>
+                    <span class="how-step-meta">
+                        <span class="meta-dot"></span>
+                        Complete your sale
+                    </span>
+                </div>
+            </article>
+
+        </div>
+
+       
+    </div>
+</section>
+
+<section class="inspection-section" id="car-inspection">
+    <div class="inspection-container">
+
+        <!-- SECTION HEADER -->
+        <div class="inspection-header">
+            <span class="inspection-eyebrow">
+                <span class="inspection-dot"></span>
+                TRANSPARENCY YOU CAN TRUST
+            </span>
+
+            <h2>
+                Buy With Confidence.
+                <span>Drive With Peace of Mind.</span>
+            </h2>
+
+            <p>
+                Know more before you make a decision. CARVIBE helps buyers
+                understand vehicle details, review available documents,
+                and access inspection information when available.
+            </p>
+        </div>
+
+        <!-- TRUST HIGHLIGHTS -->
+        <div class="inspection-highlights">
+
+            <article class="inspection-highlight">
+                <div class="inspection-icon">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <path d="M5 27L9 17H39L43 27V37H5V27Z"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <path d="M9 17L13 10H35L39 17"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <circle cx="13" cy="34" r="3"
+                                stroke="currentColor" stroke-width="2.2"/>
+                        <circle cx="35" cy="34" r="3"
+                                stroke="currentColor" stroke-width="2.2"/>
+                        <path d="M18 23H30"
+                              stroke="#E31E24" stroke-width="2.5"
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="highlight-number">01</span>
+                <h3>Vehicle Condition</h3>
+                <p>
+                    Review inspection findings when a physical vehicle
+                    inspection has been completed and a report is available.
+                </p>
+                <span class="highlight-tag optional-tag">
+                    Optional inspection
+                </span>
+            </article>
+
+            <article class="inspection-highlight">
+                <div class="inspection-icon">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <path d="M12 5H29L38 14V42H12V5Z"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <path d="M28 5V15H38"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <path d="M18 23H31M18 29H26"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linecap="round"/>
+                        <path d="M19 35L22 38L29 31"
+                              stroke="#E31E24" stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="highlight-number">02</span>
+                <h3>Document Verification</h3>
+                <p>
+                    Review the status of supported document checks and
+                    confirm vehicle details before completing a purchase.
+                </p>
+                <span class="highlight-tag standard-tag">
+                    Listing checks
+                </span>
+            </article>
+
+            <article class="inspection-highlight">
+                <div class="inspection-icon">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <path d="M24 4L39 10V22C39 32 32 39 24 44C16 39 9 32 9 22V10L24 4Z"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <path d="M16 24L22 30L33 18"
+                              stroke="#E31E24" stroke-width="2.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="highlight-number">03</span>
+                <h3>Verified Badges</h3>
+                <p>
+                    Identify listings or sellers that have completed the
+                    specific checks described by their verification badge.
+                </p>
+                <span class="highlight-tag standard-tag">
+                    Status-based badges
+                </span>
+            </article>
+
+            <article class="inspection-highlight">
+                <div class="inspection-icon">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <path d="M10 5H29L38 14V42H10V5Z"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <path d="M28 5V15H38"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linejoin="round"/>
+                        <path d="M16 22H31M16 28H31M16 34H25"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="highlight-number">04</span>
+                <h3>Inspection Reports</h3>
+                <p>
+                    Access available reports to understand recorded findings
+                    and ask questions before arranging a test drive.
+                </p>
+                <span class="highlight-tag optional-tag">
+                    Where available
+                </span>
+            </article>
+
+        </div>
+
+        <!-- VERIFICATION PROCESS -->
+        <div class="verification-panel">
+
+            <div class="verification-intro">
+                <span class="verification-kicker">KNOW WHAT IS CHECKED</span>
+                <h3>Clear Checks. Clear Expectations.</h3>
+                <p>
+                    Every verification status should explain its scope.
+                    A document check is not the same as a physical inspection.
+                </p>
+            </div>
+
+            <div class="verification-types">
+
+                <article class="verification-type">
+                    <div class="verification-type-heading">
+                        <span class="verification-symbol standard-symbol">✓</span>
+                        <div>
+                            <span class="verification-label">STANDARD LISTING CHECKS</span>
+                            <h4>Listing & Document Status</h4>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>Required listing information and consistency checks.</li>
+                        <li>Document checks where supported and completed.</li>
+                        <li>Seller verification status, where applicable.</li>
+                    </ul>
+
+                    <p class="verification-footnote">
+                        The checks included depend on CARVIBE's actual listing
+                        process. A badge should identify exactly what was checked.
+                    </p>
+                </article>
+
+                <article class="verification-type optional-verification">
+                    <div class="verification-type-heading">
+                        <span class="verification-symbol optional-symbol">+</span>
+                        <div>
+                            <span class="verification-label">OPTIONAL SERVICE</span>
+                            <h4>Physical Vehicle Inspection</h4>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>Recorded exterior and interior condition findings.</li>
+                        <li>Mechanical checks within the inspection scope.</li>
+                        <li>Report access when an inspection has been completed.</li>
+                    </ul>
+
+                    <p class="verification-footnote">
+                        Availability, scope and fees may vary. An inspection
+                        report reflects findings at the time of inspection.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+<section class="selling-guide" id="selling-guide">
+    <div class="guide-container">
+
+        <!-- SECTION HEADER -->
+        <div class="guide-header">
+            <span class="guide-eyebrow">
+                <span class="guide-dot"></span>
+                THE SMART SELLER'S HANDBOOK
+            </span>
+
+            <h2>
+                Sell Smarter.
+                <span>Get More From Your Car.</span>
+            </h2>
+
+            <p>
+                A successful car sale starts with the right preparation.
+                Explore practical tips to price your vehicle, attract genuine
+                buyers, evaluate offers, and complete your sale confidently.
+            </p>
+        </div>
+
+        <!-- GUIDE CONTENT -->
+        <div class="guide-layout">
+
+            <!-- LEFT INTRODUCTION -->
+            <div class="guide-intro">
+                <span class="guide-side-number">01 — 05</span>
+
+                <h3>Your Roadmap to a Better Sale</h3>
+
+                <p>
+                    From setting a competitive asking price to transferring
+                    ownership, every step matters. Use this guide to prepare
+                    your listing and make informed decisions throughout
+                    the selling process.
+                </p>
+
+                <div class="guide-highlight">
+                    <span class="guide-highlight-icon">✦</span>
+                    <p>
+                        <strong>Seller tip</strong>
+                        <span>
+                            Be transparent about your car's condition,
+                            service history, and known issues. Honest
+                            listings help set the right expectations.
+                        </span>
+                    </p>
+                </div>
+
+                <a href="sell.html" class="guide-text-link">
+                    View Seller Checklist
+                    <span>↗</span>
+                </a>
+            </div>
+
+            <!-- RIGHT EDITORIAL TIMELINE -->
+            <div class="guide-timeline">
+
+                <!-- TIP 1 -->
+                <article class="guide-item">
+                    <div class="guide-marker">
+                        <span>01</span>
+                    </div>
+
+                    <div class="guide-item-content">
+                        <span class="guide-category">PRICING STRATEGY</span>
+
+                        <h3>Price Your Car Competitively</h3>
+
+                        <p>
+                            Compare similar cars by model, variant, year,
+                            mileage, location, and condition. Set a realistic
+                            asking price based on current listings and
+                            available valuation information.
+                        </p>
+
+                        <ul class="guide-points">
+                            <li>Research comparable vehicles.</li>
+                            <li>Account for mileage and maintenance.</li>
+                            <li>Allow reasonable room for negotiation.</li>
+                        </ul>
+
+                        <a href="sell.html" class="guide-read-more">
+                            Estimate Your Car's Value <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TIP 2 -->
+                <article class="guide-item">
+                    <div class="guide-marker">
+                        <span>02</span>
+                    </div>
+
+                    <div class="guide-item-content">
+                        <span class="guide-category">PHOTOGRAPHY</span>
+
+                        <h3>Make Your Car Stand Out in Photos</h3>
+
+                        <p>
+                            Clean your vehicle before taking photographs.
+                            Use natural daylight, a tidy background, and
+                            clear angles to help buyers understand what
+                            you are selling.
+                        </p>
+
+                        <ul class="guide-points">
+                            <li>Capture front, rear, side, and interior views.</li>
+                            <li>Show the dashboard and odometer clearly.</li>
+                            <li>Photograph visible damage honestly.</li>
+                        </ul>
+
+                        <a href="sell.html" class="guide-read-more">
+                            Create Your Listing <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TIP 3 -->
+                <article class="guide-item">
+                    <div class="guide-marker">
+                        <span>03</span>
+                    </div>
+
+                    <div class="guide-item-content">
+                        <span class="guide-category">DOCUMENT PREPARATION</span>
+
+                        <h3>Keep Your Documents Ready</h3>
+
+                        <p>
+                            Prepare the original registration certificate,
+                            valid insurance details, PUC certificate where
+                            applicable, service records, and other paperwork
+                            relevant to your vehicle and transaction.
+                        </p>
+
+                        <ul class="guide-points">
+                            <li>Check the RC and registered owner details.</li>
+                            <li>Review loan or hypothecation status, if applicable.</li>
+                            <li>Confirm the required transfer forms and documents.</li>
+                        </ul>
+
+                        <a href="sell.html" class="guide-read-more">
+                            Review Seller Checklist <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TIP 4 -->
+                <article class="guide-item">
+                    <div class="guide-marker">
+                        <span>04</span>
+                    </div>
+
+                    <div class="guide-item-content">
+                        <span class="guide-category">OFFER EVALUATION</span>
+
+                        <h3>Evaluate Buyer Offers Carefully</h3>
+
+                        <p>
+                            Consider more than the quoted amount. Compare
+                            buyer readiness, payment arrangements, inspection
+                            requests, and the practical terms of the proposed
+                            transaction before agreeing.
+                        </p>
+
+                        <ul class="guide-points">
+                            <li>Compare offers against your target price.</li>
+                            <li>Ask clear questions about payment timing.</li>
+                            <li>Agree on price and conditions in writing.</li>
+                        </ul>
+
+                        <a href="#buyer-enquiries" class="guide-read-more">
+                            Manage Buyer Enquiries <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TIP 5 -->
+                <article class="guide-item">
+                    <div class="guide-marker">
+                        <span>05</span>
+                    </div>
+
+                    <div class="guide-item-content">
+                        <span class="guide-category">SAFE TRANSACTION</span>
+
+                        <h3>Secure Payment & Transfer Ownership</h3>
+
+                        <p>
+                            Verify that payment has actually cleared before
+                            handing over the vehicle. Complete the applicable
+                            ownership-transfer formalities and retain copies
+                            of signed documents and transaction records.
+                        </p>
+
+                        <ul class="guide-points">
+                            <li>Never rely solely on payment screenshots.</li>
+                            <li>Complete the required RTO transfer process.</li>
+                            <li>Keep proof of payment and handover.</li>
+                        </ul>
+
+                        <a href="contact.html" class="guide-read-more">
+                            Get Selling Assistance <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- SELLER CHECKLIST -->
+        <div class="seller-checklist" id="seller-checklist">
+            <div class="checklist-heading">
+                <span class="guide-category">BEFORE YOU GO LIVE</span>
+                <h3>Your Pre-Sale Checklist</h3>
+                <p>
+                    Work through these essentials before publishing your
+                    vehicle listing.
+                </p>
+            </div>
+
+            <div class="checklist-items">
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <span>Compare prices of similar vehicles</span>
+                </label>
+
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <span>Clean the car and take clear photos</span>
+                </label>
+
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <span>Prepare relevant vehicle documents</span>
+                </label>
+
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <span>Set your asking price and negotiation limit</span>
+                </label>
+
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <span>Plan safe payment and ownership transfer</span>
+                </label>
+            </div>
+
+            <a href="sell.html" class="guide-cta">
+                Ready to Sell Your Car?
+                <span>↗</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="cv-sell-faq" id="sell-faq">
+  <div class="cv-sell-faq-container">
+
+    <!-- Section Heading -->
+    <div class="cv-sell-faq-heading">
+      <span class="cv-sell-faq-label">
+        <span class="cv-sell-faq-label-line"></span>
+        SELLER SUPPORT
+      </span>
+
+      <h2>Frequently Asked <span>Questions</span></h2>
+
+      <p>
+        Everything you need to know about listing your car,
+        finding buyers, and completing your sale confidently.
+      </p>
+    </div>
+
+    <div class="cv-sell-faq-layout">
+
+      <!-- Left Introduction -->
+      <div class="cv-sell-faq-intro">
+        <span class="cv-sell-faq-count">01 <span>/ YOUR GUIDE</span></span>
+
+        <h3>Have questions about selling your car?</h3>
+
+        <p>
+          We have answered the most common questions to help you
+          move from listing your vehicle to completing your sale.
+        </p>
+
+        <a href="contact.html" class="cv-sell-faq-contact">
+          Need more help?
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="cv-sell-faq-decoration" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="cv-sell-faq-list">
+
+        <div class="cv-sell-faq-item active">
+          <button
+            class="cv-sell-faq-question"
+            id="sell-faq-question-1"
+            aria-expanded="true"
+            aria-controls="sell-faq-answer-1"
+          >
+            <span class="cv-sell-faq-number">01</span>
+            <span class="cv-sell-faq-question-text">
+              Is listing my car on CARVIBE free?
+            </span>
+            <span class="cv-sell-faq-icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="cv-sell-faq-answer"
+            id="sell-faq-answer-1"
+            role="region"
+            aria-labelledby="sell-faq-question-1"
+          >
+            <div class="cv-sell-faq-answer-inner">
+              Listing fees depend on the options offered by CARVIBE.
+              Review the displayed listing terms before publishing.
+              Optional promotion, inspection, or premium services
+              may involve additional charges.
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-sell-faq-item">
+          <button
+            class="cv-sell-faq-question"
+            id="sell-faq-question-2"
+            aria-expanded="false"
+            aria-controls="sell-faq-answer-2"
+          >
+            <span class="cv-sell-faq-number">02</span>
+            <span class="cv-sell-faq-question-text">
+              How do I estimate my car's selling price?
+            </span>
+            <span class="cv-sell-faq-icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="cv-sell-faq-answer"
+            id="sell-faq-answer-2"
+            role="region"
+            aria-labelledby="sell-faq-question-2"
+          >
+            <div class="cv-sell-faq-answer-inner">
+              Consider your car's make, model, age, kilometres driven,
+              condition, service history, ownership, and similar
+              vehicles currently listed in your market. An online
+              estimate is a guide rather than a guaranteed offer.
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-sell-faq-item">
+          <button
+            class="cv-sell-faq-question"
+            id="sell-faq-question-3"
+            aria-expanded="false"
+            aria-controls="sell-faq-answer-3"
+          >
+            <span class="cv-sell-faq-number">03</span>
+            <span class="cv-sell-faq-question-text">
+              Can I edit my car listing after publishing?
+            </span>
+            <span class="cv-sell-faq-icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="cv-sell-faq-answer"
+            id="sell-faq-answer-3"
+            role="region"
+            aria-labelledby="sell-faq-question-3"
+          >
+            <div class="cv-sell-faq-answer-inner">
+              If listing edits are enabled, sign in to your seller
+              dashboard and open your vehicle listing. Update details
+              such as price, description, and photographs. Some
+              verified information may require additional review.
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-sell-faq-item">
+          <button
+            class="cv-sell-faq-question"
+            id="sell-faq-question-4"
+            aria-expanded="false"
+            aria-controls="sell-faq-answer-4"
+          >
+            <span class="cv-sell-faq-number">04</span>
+            <span class="cv-sell-faq-question-text">
+              How can I connect with interested buyers?
+            </span>
+            <span class="cv-sell-faq-icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="cv-sell-faq-answer"
+            id="sell-faq-answer-4"
+            role="region"
+            aria-labelledby="sell-faq-question-4"
+          >
+            <div class="cv-sell-faq-answer-inner">
+              Check your seller dashboard or enquiry notifications
+              if those features are available. Respond to genuine
+              enquiries, answer questions honestly, and arrange
+              test drives in a safe public location.
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-sell-faq-item">
+          <button
+            class="cv-sell-faq-question"
+            id="sell-faq-question-5"
+            aria-expanded="false"
+            aria-controls="sell-faq-answer-5"
+          >
+            <span class="cv-sell-faq-number">05</span>
+            <span class="cv-sell-faq-question-text">
+              What documents are needed to sell a car in India?
+            </span>
+            <span class="cv-sell-faq-icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="cv-sell-faq-answer"
+            id="sell-faq-answer-5"
+            role="region"
+            aria-labelledby="sell-faq-question-5"
+          >
+            <div class="cv-sell-faq-answer-inner">
+              Common documents include the Registration Certificate
+              (RC), valid insurance, applicable PUC certificate,
+              identity details, and prescribed ownership-transfer
+              forms. Loan-related hypothecation may also need to be
+              cleared. Confirm the applicable requirements with your
+              local RTO or the official Parivahan portal.
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-sell-faq-item">
+          <button
+            class="cv-sell-faq-question"
+            id="sell-faq-question-6"
+            aria-expanded="false"
+            aria-controls="sell-faq-answer-6"
+          >
+            <span class="cv-sell-faq-number">06</span>
+            <span class="cv-sell-faq-question-text">
+              How can I avoid fraudulent buyers?
+            </span>
+            <span class="cv-sell-faq-icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="cv-sell-faq-answer"
+            id="sell-faq-answer-6"
+            role="region"
+            aria-labelledby="sell-faq-question-6"
+          >
+            <div class="cv-sell-faq-answer-inner">
+              Never share OTPs or banking credentials, pay fees to
+              receive money, or rely only on payment screenshots.
+              Verify that funds have reached your account before
+              handing over the vehicle. Document the transaction and
+              complete the official ownership-transfer process.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+</section>
+
+<!-- CARVIBE FINAL CTA SECTION -->
+<section class="cv-sell-cta">
+    <div class="cv-sell-cta-bg"></div>
+
+    <div class="cv-sell-cta-container">
+
+        <div class="cv-sell-cta-content">
+            <span class="cv-sell-cta-label">
+                <span class="cv-cta-dot"></span>
+                SELL SMARTER WITH CARVIBE
+            </span>
+
+            <h2>
+                Ready to Sell Your Car
+                <span>the Smarter Way?</span>
+            </h2>
+
+            <p>
+                Turn your car into an opportunity. Reach interested buyers,
+                showcase your vehicle, and take the next step toward a
+                hassle-free sale with CARVIBE.
+            </p>
+
+            <div class="cv-sell-cta-buttons">
+                <a href="sell.html" class="cv-cta-primary">
+                    Start Selling Your Car
+                    <span class="cv-cta-arrow">→</span>
+                </a>
+
+                <a href="sell.html" class="cv-cta-secondary">
+                    Explore How It Works
+                </a>
+            </div>
+
+            <div class="cv-sell-cta-trust">
+                <div class="cv-cta-trust-item">
+                    <span class="cv-cta-check">✓</span>
+                    <span>Simple Listing Process</span>
+                </div>
+
+                <div class="cv-cta-trust-item">
+                    <span class="cv-cta-check">✓</span>
+                    <span>Connect With Buyers</span>
+                </div>
+
+                <div class="cv-cta-trust-item">
+                    <span class="cv-cta-check">✓</span>
+                    <span>You Stay in Control</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-sell-cta-visual">
+            <div class="cv-cta-circle cv-cta-circle-one"></div>
+            <div class="cv-cta-circle cv-cta-circle-two"></div>
+
+            <div class="cv-cta-car-icon">
+                <svg viewBox="0 0 640 300" role="img"
+                    aria-label="Stylized car illustration">
+                    <defs>
+                        <linearGradient id="cvCarPaint" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ff454b"/>
+                            <stop offset="100%" stop-color="#b81419"/>
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M90 183 L120 124 Q132 102 164 96
+                        L253 78 Q280 72 302 96 L370 153
+                        L480 165 Q512 170 522 198
+                        L526 221 L91 221 Z"
+                        fill="url(#cvCarPaint)"/>
+
+                    <path d="M164 110 L250 94 Q270 91 287 109
+                        L329 151 L139 151 Z"
+                        fill="#b9d8e8"/>
+
+                    <path d="M298 109 L359 157 L340 157
+                        L282 105 Z" fill="#102a43"/>
+
+                    <path d="M85 184 L54 192 Q44 196 45 209
+                        L47 221 L94 221 Z"
+                        fill="#102a43"/>
+
+                    <path d="M479 166 L509 178 Q522 184 526 199
+                        L528 216 L489 216 Z"
+                        fill="#102a43"/>
+
+                    <path d="M107 177 L482 177"
+                        stroke="#ff777b" stroke-width="4"
+                        stroke-linecap="round"/>
+
+                    <rect x="78" y="193" width="33" height="12"
+                        rx="5" fill="#fff0c2"/>
+
+                    <rect x="491" y="192" width="26" height="12"
+                        rx="5" fill="#ffdbdb"/>
+
+                    <circle cx="166" cy="219" r="43" fill="#102a43"/>
+                    <circle cx="166" cy="219" r="25" fill="#dce3eb"/>
+                    <circle cx="166" cy="219" r="12" fill="#667085"/>
+
+                    <circle cx="439" cy="219" r="43" fill="#102a43"/>
+                    <circle cx="439" cy="219" r="25" fill="#dce3eb"/>
+                    <circle cx="439" cy="219" r="12" fill="#667085"/>
+
+                    <path d="M210 220 L395 220"
+                        stroke="#f7f9fc" stroke-width="3"
+                        stroke-linecap="round" opacity=".5"/>
+                </svg>
+            </div>
+
+            <div class="cv-cta-floating-card cv-cta-card-top">
+                <span class="cv-cta-card-icon">↗</span>
+                <div>
+                    <strong>More Visibility</strong>
+                    <small>Showcase your vehicle</small>
+                </div>
+            </div>
+
+            <div class="cv-cta-floating-card cv-cta-card-bottom">
+                <span class="cv-cta-card-icon cv-cta-card-icon-blue">✓</span>
+                <div>
+                    <strong>Your Next Move</strong>
+                    <small>Start with your listing</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+<!-- =========================================================
+     CARVIBE FOOTER
+========================================================= -->
+
+<footer class="carvibe-footer">
+
+    <div class="footer-container">
+
+        <!-- ================= BRAND ================= -->
+
+        <div class="footer-brand">
+
+            <!-- LOGO WITH TAGLINE -->
+<a href="index.html" class="carvibe-logo">
+
+    <img
+        src="images/logo website.png"
+        alt="CarVibe Logo"
+        class="logo-image"
+    >
+
+    <div class="logo-text">
+        <span class="logo-name">
+            Car<span class="logo-accent">Vibe</span>
+        </span>
+
+        <span class="logo-tagline">Find Your Drive</span>
+    </div>
+
+</a>
+
+            <p class="footer-description">
+                Find your next drive with confidence. CarVibe makes
+                buying and selling quality used cars simple, transparent,
+                and hassle-free.
+            </p>
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= QUICK LINKS ================= -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li>
+                    <a href="home1.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="buy.html">
+                        Browse Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="sell.html">
+                        Sell Your Car
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Our Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= MARKETPLACE ================= -->
+
+        <div class="footer-column">
+
+            <h3>Marketplace</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Latest Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Featured Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Budget Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Luxury Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        SUVs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Electric Cars
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= SUPPORT ================= -->
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Help Center
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Buying Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Selling Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Safety & Trust
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <div class="footer-newsletter">
+
+            <h3>Stay In The Driver's Seat</h3>
+
+            <p>
+                Get the latest car deals, marketplace updates
+                and automotive tips directly in your inbox.
+            </p>
+
+
+            <form class="newsletter-form">
+
+                <div class="newsletter-input">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-contact">
+
+                <a href="tel:+919876543210">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 98765 43210
+                    </span>
+
+                </a>
+
+                <a href="mailto:hello@carvibe.com">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <span>
+                        hello@carvibe.com
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER BOTTOM ================= -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p>
+                © 2026 CarVibe. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Cookies
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="sell.js"></script>
+<script src="header.js"></script>
+</body>
+
+</html>

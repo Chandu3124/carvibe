@@ -1,0 +1,1397 @@
+
+/* =========================================
+   CARVIBE LOGIN PAGE
+   Red, Navy, Premium Responsive Design
+========================================= */
+
+:root {
+    --primary: #E31E24;
+    --primary-dark: #B81419;
+    --secondary: #102A43;
+    --secondary-dark: #081C2C;
+    --white: #FFFFFF;
+    --light: #F7F9FC;
+    --text: #17202A;
+    --text-light: #667085;
+    --border: #E5E9F0;
+    --panel-bg: #FFFFFF;
+    --input-bg: #FFFFFF;
+    --soft-bg: #F7F9FC;
+    --heading-font: "Fraunces", Georgia, serif;
+    --body-font: "Manrope", sans-serif;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --panel-bg: #111A26;
+    --input-bg: #172333;
+    --soft-bg: #192635;
+    --text: #F1F5F9;
+    --text-light: #A7B3C2;
+    --border: #2B394B;
+    --light: #111A26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--panel-bg);
+    font-family: var(--body-font);
+    font-size: 12px;
+    transition: background .3s ease, color .3s ease;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.cv-login-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* =========================================
+   LEFT IMAGE PANEL
+========================================= */
+
+.cv-login-visual {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 28px 36px 22px;
+    overflow: hidden;
+    color: #FFFFFF;
+    background: #081C2C;
+}
+
+.cv-visual-image {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85");
+    background-size: cover;
+    background-position: center;
+    animation: cvImageReveal 1s ease-out both;
+}
+
+.cv-visual-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 17, 29, .45),
+        rgba(5, 17, 29, .74) 48%,
+        rgba(5, 17, 29, .97)
+    );
+    pointer-events: none;
+}
+
+@keyframes cvImageReveal {
+    from {
+        opacity: .5;
+        transform: scale(1.08);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cv-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    color: #FFFFFF;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -.7px;
+}
+
+.cv-brand > span:last-child > span,
+.cv-mobile-brand span span {
+    color: var(--primary);
+}
+
+.cv-brand-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.cv-visual-content {
+    width: 100%;
+    max-width: 450px;
+    margin: 30px auto;
+    animation: cvContentEnter .8s ease-out both;
+}
+
+@keyframes cvContentEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cv-visual-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 19px;
+    padding: 8px 11px;
+    color: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 30px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.cv-live-dot {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #55D6A0;
+    box-shadow: 0 0 9px rgba(85,214,160,.7);
+    animation: cvDotPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes cvDotPulse {
+    50% {
+        box-shadow: 0 0 0 5px rgba(85,214,160,.12);
+    }
+}
+
+.cv-visual-content h1 {
+    max-width: 440px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-family: var(--heading-font);
+    font-size: clamp(32px, 3.4vw, 46px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.cv-visual-content h1 span {
+    display: block;
+    color: #FF5A60;
+    font-style: italic;
+}
+
+.cv-visual-content > p {
+    max-width: 380px;
+    margin-bottom: 25px;
+    color: rgba(255,255,255,.77);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.cv-visual-benefits {
+    display: grid;
+    gap: 13px;
+}
+
+.cv-benefit {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: fit-content;
+    transition: transform .3s ease;
+}
+
+.cv-benefit:hover {
+    transform: translateX(4px);
+}
+
+.cv-benefit > span {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    color: #FF666B;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 9px;
+    font-size: 13px;
+    transition: background .3s ease, color .3s ease;
+}
+
+.cv-benefit:hover > span {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.cv-benefit strong,
+.cv-benefit small {
+    display: block;
+}
+
+.cv-benefit strong {
+    margin-bottom: 3px;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.cv-benefit small {
+    color: rgba(255,255,255,.66);
+    font-size: 9px;
+}
+
+.cv-visual-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,.64);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.cv-footer-line {
+    width: 45px;
+    height: 2px;
+    background: var(--primary);
+}
+
+/* =========================================
+   RIGHT LOGIN PANEL
+========================================= */
+
+.cv-login-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 20px 30px 16px;
+    background: var(--panel-bg);
+    transition: background .3s ease, color .3s ease;
+}
+
+.cv-login-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cv-mobile-brand {
+    display: none;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--heading-font);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.cv-mobile-brand > i {
+    color: var(--primary);
+}
+
+.cv-display-controls {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.cv-control-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 35px;
+    height: 33px;
+    padding: 0 9px;
+    color: var(--text);
+    background: var(--soft-bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 800;
+    transition: .3s ease;
+}
+
+.cv-control-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.cv-login-content {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    animation: cvContentEnter .8s ease-out both;
+}
+
+/* =========================================
+   LOGO WITH TAGLINE
+========================================= */
+
+.cv-login-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.carvibe-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    margin-bottom: 22px;
+    text-decoration: none;
+    transition: transform .3s ease;
+}
+
+.carvibe-logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo-image {
+    display: block;
+    flex: 0 0 58px;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.logo-name {
+    color: var(--text);
+    font-family: var(--heading-font);
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.logo-accent {
+    color: var(--primary);
+}
+
+.logo-tagline {
+    color: var(--primary);
+    font-family: var(--body-font);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   LOGIN HEADING
+========================================= */
+
+.cv-login-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 11px;
+    color: var(--primary);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.cv-login-eyebrow > span {
+    width: 19px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.cv-login-heading h2 {
+    margin-bottom: 9px;
+    color: var(--text);
+    font-family: var(--heading-font);
+    font-size: clamp(29px, 2.7vw, 36px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -.8px;
+}
+
+.cv-login-heading h2 span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.cv-login-heading > p {
+    margin-bottom: 21px;
+    color: var(--text-light);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.cv-form-group {
+    margin-bottom: 15px;
+}
+
+.cv-form-group > label,
+.cv-label-row > label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.cv-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 7px;
+}
+
+.cv-label-row > label {
+    margin-bottom: 0;
+}
+
+.cv-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cv-input-icon {
+    position: absolute;
+    left: 12px;
+    z-index: 1;
+    color: #98A2B3;
+    font-size: 12px;
+    pointer-events: none;
+    transition: color .3s ease;
+}
+
+.cv-input-wrap input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 43px;
+    padding: 0 39px;
+    color: var(--text);
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    outline: none;
+    font-size: 10px;
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.cv-input-wrap input::placeholder {
+    color: #98A2B3;
+    opacity: 1;
+}
+
+.cv-input-wrap:focus-within .cv-input-icon {
+    color: var(--primary);
+}
+
+.cv-input-wrap input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(227,30,36,.08);
+}
+
+.cv-field-error {
+    display: block;
+    margin-top: 5px;
+    color: #D92D20;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.cv-field-error:empty {
+    display: none;
+}
+
+/* =========================================
+   PASSWORD - ONLY ONE EYE ICON
+========================================= */
+
+.cv-password-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Leave room for the eye toggle */
+.cv-password-wrap input {
+    padding-right: 43px;
+}
+
+/* One button and one icon */
+.cv-password-wrap .cv-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    left: auto;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 29px;
+    height: 29px;
+    padding: 0;
+
+    color: var(--text-light);
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.cv-password-wrap .cv-password-toggle i {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.cv-password-wrap .cv-password-toggle:hover {
+    color: var(--primary);
+    background: var(--soft-bg);
+}
+
+.cv-password-wrap .cv-password-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Do not generate extra icons using CSS */
+.cv-password-wrap .cv-password-toggle::before,
+.cv-password-wrap .cv-password-toggle::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* =========================================
+   REMEMBER ME / FORGOT PASSWORD
+========================================= */
+
+.cv-form-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    margin: 2px 0 18px;
+}
+
+.cv-remember {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 1 auto;
+    gap: 7px;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 9px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.cv-remember input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.cv-custom-check {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--input-bg);
+    border: 1px solid #C8D0DC;
+    border-radius: 3px;
+}
+
+.cv-remember input:checked + .cv-custom-check {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.cv-remember input:checked + .cv-custom-check::after {
+    content: "\f00c";
+    color: #FFFFFF;
+    font-family: "Font Awesome 6 Free";
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.cv-remember input:focus-visible + .cv-custom-check {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.cv-forgot-link {
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-left: auto;
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: right;
+    white-space: nowrap;
+    transition: color .25s ease;
+}
+
+.cv-forgot-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.cv-login-submit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 16px;
+    overflow: hidden;
+    color: #FFFFFF;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 7px;
+    box-shadow: 0 6px 17px rgba(227,30,36,.16);
+    font-size: 11px;
+    font-weight: 800;
+    transition: .3s ease;
+}
+
+.cv-login-submit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,.2);
+    transform: skewX(-25deg);
+    transition: left .55s ease;
+    pointer-events: none;
+}
+
+.cv-login-submit:hover::before {
+    left: 150%;
+}
+
+.cv-login-submit:hover {
+    color: var(--primary);
+    background: transparent;
+    box-shadow: none;
+    transform: translateY(-2px);
+}
+
+.cv-login-submit i {
+    transition: transform .3s ease;
+}
+
+.cv-login-submit:hover i {
+    transform: translateX(4px);
+}
+
+.cv-form-message {
+    min-height: 13px;
+    margin-top: 8px;
+    color: var(--text-light);
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.cv-form-message:empty {
+    display: none;
+}
+
+.cv-form-message.is-error {
+    color: #D92D20;
+}
+
+.cv-form-message.is-success {
+    color: #16845B;
+}
+
+/* =========================================
+   SOCIAL LOGIN
+========================================= */
+
+.cv-social-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.cv-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    min-height: 42px;
+    padding: 9px 10px;
+    color: var(--text);
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: background .3s ease, border-color .3s ease,
+                box-shadow .3s ease, transform .3s ease;
+}
+
+.cv-social-btn:hover {
+    background: var(--soft-bg);
+    border-color: #A7B3C2;
+    box-shadow: 0 5px 15px rgba(16,42,67,.07);
+    transform: translateY(-2px);
+}
+
+.cv-social-btn:active {
+    transform: translateY(0);
+}
+
+.cv-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+    font-size: 17px;
+}
+
+.cv-google-icon svg {
+    display: block;
+    width: 17px;
+    height: 17px;
+}
+
+.cv-apple-btn .cv-social-icon {
+    color: var(--text);
+    font-size: 20px;
+}
+
+/* =========================================
+   DIVIDER / CREATE ACCOUNT
+========================================= */
+
+.cv-login-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.cv-login-divider > span {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.cv-login-divider p {
+    flex-shrink: 0;
+    color: var(--text-light);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.cv-create-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 39px;
+    padding: 10px 15px;
+    color: var(--text);
+    background: var(--soft-bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 800;
+    transition: .3s ease;
+}
+
+.cv-create-account i {
+    color: var(--primary);
+    font-size: 10px;
+}
+
+.cv-create-account:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   SECURITY NOTE / FOOTER
+========================================= */
+
+.cv-login-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 16px;
+    color: var(--text-light);
+    font-size: 8px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cv-login-trust i {
+    flex-shrink: 0;
+    color: #2C9A70;
+}
+
+.cv-login-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--text-light);
+    font-size: 8px;
+}
+
+.cv-login-footer > div {
+    display: flex;
+    gap: 14px;
+}
+
+.cv-login-footer a:hover {
+    color: var(--primary);
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .cv-login-panel {
+    color: var(--text);
+    background: var(--panel-bg);
+}
+
+html[data-theme="dark"] .cv-login-heading h2,
+html[data-theme="dark"] .cv-form-group > label,
+html[data-theme="dark"] .cv-label-row > label {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .cv-input-wrap input {
+    color: var(--text);
+    background: var(--input-bg);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .cv-input-wrap input::placeholder {
+    color: #8795A8;
+}
+
+html[data-theme="dark"] .cv-control-btn,
+html[data-theme="dark"] .cv-create-account,
+html[data-theme="dark"] .cv-social-btn {
+    color: var(--text);
+    background: var(--soft-bg);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .cv-control-btn:hover,
+html[data-theme="dark"] .cv-create-account:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+html[data-theme="dark"] .cv-custom-check {
+    background: var(--input-bg);
+    border-color: #526176;
+}
+
+html[data-theme="dark"] .cv-login-divider > span {
+    background: var(--border);
+}
+
+html[data-theme="dark"] .cv-password-wrap .cv-password-toggle:hover {
+    background: #243447;
+}
+
+html[data-theme="dark"] .cv-login-submit:hover {
+    color: #FF6469;
+    background: transparent;
+}
+
+html[data-theme="dark"] .cv-apple-btn .cv-social-icon {
+    color: #FFFFFF;
+}
+
+html[data-theme="dark"] .logo-name {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .logo-tagline {
+    color: var(--text-light);
+}
+
+/* =========================================
+   RTL SUPPORT
+========================================= */
+
+html[dir="rtl"] .cv-login-page {
+    direction: rtl;
+}
+
+html[dir="rtl"] .cv-login-visual {
+    text-align: right;
+}
+
+html[dir="rtl"] .cv-login-topbar {
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .cv-input-icon {
+    right: 12px;
+    left: auto;
+}
+
+html[dir="rtl"] .cv-input-wrap input {
+    padding-right: 39px;
+    padding-left: 12px;
+    text-align: right;
+}
+
+html[dir="rtl"] .cv-password-wrap input {
+    padding-left: 43px;
+}
+
+html[dir="rtl"] .cv-password-wrap .cv-password-toggle {
+    right: auto;
+    left: 7px;
+}
+
+html[dir="rtl"] .cv-benefit:hover {
+    transform: translateX(-4px);
+}
+
+html[dir="rtl"] .cv-login-submit i {
+    transform: rotate(180deg);
+}
+
+html[dir="rtl"] .cv-login-submit:hover i {
+    transform: rotate(180deg) translateX(4px);
+}
+
+html[dir="rtl"] .cv-login-heading {
+    align-items: flex-start;
+    text-align: right;
+}
+
+html[dir="rtl"] .cv-form-options {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .cv-forgot-link {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+}
+
+html[dir="rtl"] .logo-text {
+    align-items: flex-start;
+}
+
+#cv-rtl-toggle {
+    gap: 7px;
+}
+
+#cv-rtl-toggle i {
+    font-size: 13px;
+    transition: transform .25s ease;
+}
+
+#cv-rtl-toggle:hover i {
+    transform: translateX(2px);
+}
+
+/* =========================================
+   TABLETS: iPAD MINI / iPAD PRO
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1100px) {
+    .cv-login-page {
+        grid-template-columns: .9fr 1.1fr;
+    }
+
+    .cv-login-visual {
+        padding: 24px 25px 20px;
+    }
+
+    .cv-visual-content {
+        margin: 24px auto;
+    }
+
+    .cv-visual-content h1 {
+        font-size: clamp(32px, 4vw, 42px);
+    }
+
+    .cv-visual-content > p {
+        font-size: 10px;
+    }
+
+    .cv-login-panel {
+        padding: 18px 24px 15px;
+    }
+
+    .cv-login-content {
+        max-width: 360px;
+    }
+}
+
+/* =========================================
+   MOBILE: SAMSUNG GALAXY S8+ / SIMILAR
+========================================= */
+
+@media (max-width: 599px) {
+    .cv-login-page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .cv-login-visual {
+        min-height: 205px;
+        padding: 18px 20px;
+    }
+
+    .cv-brand {
+        font-size: 21px;
+    }
+
+    .cv-brand-icon {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .cv-visual-content {
+        margin: 25px 0 5px;
+    }
+
+    .cv-visual-tag {
+        margin-bottom: 11px;
+        padding: 6px 9px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .cv-visual-content h1 {
+        margin-bottom: 9px;
+        font-size: clamp(27px, 7.5vw, 35px);
+        letter-spacing: -.5px;
+    }
+
+    .cv-visual-content > p {
+        margin-bottom: 0;
+        font-size: 9px;
+        line-height: 1.7;
+    }
+
+    .cv-visual-benefits,
+    .cv-visual-footer {
+        display: none;
+    }
+
+    .cv-login-panel {
+        min-height: auto;
+        flex: 1;
+        padding: 16px 20px 15px;
+    }
+
+    .cv-login-topbar {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .cv-mobile-brand {
+        display: inline-flex;
+        font-size: 19px;
+    }
+
+    .cv-control-btn {
+        min-width: 32px;
+        height: 31px;
+        padding: 0 8px;
+    }
+
+    .cv-login-content {
+        max-width: 400px;
+        margin: 25px auto 23px;
+    }
+
+    .carvibe-logo {
+        gap: 10px;
+        margin-bottom: 17px;
+    }
+
+    .logo-image {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-name {
+        font-size: 24px;
+    }
+
+    .logo-tagline {
+        font-size: 8px;
+        letter-spacing: .8px;
+    }
+
+    .cv-login-heading h2 {
+        font-size: clamp(28px, 7.5vw, 34px);
+    }
+
+    .cv-login-heading > p {
+        margin-bottom: 18px;
+    }
+
+    .cv-form-group {
+        margin-bottom: 14px;
+    }
+
+    .cv-input-wrap input {
+        height: 42px;
+    }
+
+    .cv-login-submit {
+        min-height: 43px;
+    }
+
+    .cv-login-trust {
+        margin-top: 12px;
+    }
+
+    .cv-login-footer {
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+    }
+
+    .cv-form-options {
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .cv-social-login {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        margin-top: 11px;
+    }
+
+    .cv-social-btn {
+        min-height: 43px;
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   VERY SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+    .cv-login-visual {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .cv-login-panel {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .cv-form-options {
+        gap: 6px;
+    }
+
+    .cv-remember,
+    .cv-forgot-link {
+        font-size: 8px;
+    }
+
+    .cv-remember {
+        gap: 5px;
+    }
+
+    .cv-social-login {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   SHORT DESKTOP SCREENS
+========================================= */
+
+@media (max-height: 760px) and (min-width: 600px) {
+    .cv-login-visual {
+        padding-top: 20px;
+        padding-bottom: 18px;
+    }
+
+    .cv-visual-content {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .cv-visual-tag {
+        margin-bottom: 12px;
+    }
+
+    .cv-visual-content h1 {
+        margin-bottom: 10px;
+    }
+
+    .cv-visual-content > p {
+        margin-bottom: 16px;
+    }
+
+    .cv-visual-benefits {
+        gap: 9px;
+    }
+
+    .cv-login-panel {
+        padding-top: 14px;
+        padding-bottom: 12px;
+    }
+
+    .cv-login-content {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .cv-login-heading > p {
+        margin-bottom: 15px;
+    }
+
+    .cv-form-group {
+        margin-bottom: 12px;
+    }
+
+    .cv-form-options {
+        margin-bottom: 13px;
+    }
+
+    .cv-login-trust {
+        margin-top: 10px;
+    }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+.cv-visual-content {
+    margin-top: 110px;
+}
